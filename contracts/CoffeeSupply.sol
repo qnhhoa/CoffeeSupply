@@ -33,9 +33,10 @@ contract SupplyChain {
     
     /*User Roles
         SUPER_ADMIN,
-        FARM_INSPECTION,
+        FARM_INSPECTOR,
         HARVESTER,
-        EXPORTER,
+        IMPORTER,
+        EXTRACTOR,
         IMPORTER,
         PROCESSOR
     */
@@ -68,13 +69,14 @@ contract SupplyChain {
     
     struct nhapKho {
         uint256 warehouseNo;
+        uint256 importerNo;
         uint256 shipNo;
         uint256 quantity;
         uint256 importDateTime;
     }
     
     struct cheBien {
-        uint256 ProcessorNo;
+        uint256 warehouseNo;
         uint256 humidity;
         uint256 temperature;
         uint256 peelingTime;
@@ -84,7 +86,7 @@ contract SupplyChain {
     }
     
     struct chietXuat {
-        uint256 extractorNo;
+        uint256 warehouseNo;
         uint256 roastingTime;
         uint256 grindingTime;
         uint256 temperature;
@@ -92,6 +94,7 @@ contract SupplyChain {
     }
 
     struct xuatKho {
+        uint256 exporterNo;
         uint256 distributorNo;
         uint256 quantity;
         uint256 exportDateTime;
@@ -243,10 +246,12 @@ contract SupplyChain {
     /*set nhapKho data*/
     function setNhapKhoData(uint256 batchNo,
                                 uint256 warehouseNo,
+                                uint256 importerNo,
                                 uint256 shipNo,
                                 uint256 quantity,
                                 uint256 importDateTime) public returns(bool){
         nhapKhoData.warehouseNo = warehouseNo;
+        nhapKhoData.importerNo = importerNo;
         nhapKhoData.shipNo = shipNo;
         nhapKhoData.quantity = quantity;
         nhapKhoData.importDateTime = importDateTime;
@@ -261,26 +266,27 @@ contract SupplyChain {
     /*get nhapKho data*/
     function getNhapKhoData(uint256 batchNo) public view returns (
                                 uint256 warehouseNo,
+                                uint256 importerNo,
                                 uint256 shipNo,
                                 uint256 quantity,
                                 uint256 importDateTime){
         
         nhapKho memory tmpData = batchNhapKho[batchNo];
-        return (tmpData.warehouseNo, tmpData.shipNo, tmpData.quantity,tmpData.importDateTime);
+        return (tmpData.warehouseNo, tmpData.importerNo, tmpData.shipNo, tmpData.quantity,tmpData.importDateTime);
     }
 
 
 
     /*set cheBien data*/
     function setCheBienData(uint256 batchNo,
-                                uint256 ProcessorNo,
+                                uint256 warehouseNo,
                                 uint256 humidity,
                                 uint256 temperature,
                                 uint256 peelingTime,
                                 uint256 fermentTime,
                                 uint256 dryingTime,
                                 uint256 processingTime) public returns(bool){
-        cheBienData.ProcessorNo = ProcessorNo;
+        cheBienData.warehouseNo = warehouseNo;
         cheBienData.humidity = humidity;
         cheBienData.temperature = temperature;
         cheBienData.peelingTime = peelingTime;
@@ -297,7 +303,7 @@ contract SupplyChain {
 
     /*get cheBien data*/
     function getCheBienData(uint256 batchNo) public view returns (
-                                uint256 ProcessorNo,
+                                uint256 warehouseNo,
                                 uint256 humidity,
                                 uint256 temperature,
                                 uint256 peelingTime,
@@ -306,19 +312,19 @@ contract SupplyChain {
                                 uint256 processingTime){
         
         cheBien memory tmpData = batchCheBien[batchNo];
-        return (tmpData.ProcessorNo, tmpData.humidity, tmpData.temperature,tmpData.peelingTime,tmpData.fermentTime,tmpData.dryingTime,tmpData.processingTime);
+        return (tmpData.warehouseNo, tmpData.humidity, tmpData.temperature,tmpData.peelingTime,tmpData.fermentTime,tmpData.dryingTime,tmpData.processingTime);
     }
 
 
 
     /*set chietXuat data*/
     function setChietXuatData(uint256 batchNo,
-                                uint256 extractorNo,
+                                uint256 warehouseNo,
                                 uint256 roastingTime,
                                 uint256 grindingTime,
                                 uint256 temperature,
                                 uint256 packageDateTime) public returns(bool){
-        chietXuatData.extractorNo = extractorNo;
+        chietXuatData.warehouseNo = warehouseNo;
         chietXuatData.roastingTime = roastingTime;
         chietXuatData.grindingTime = grindingTime;
         chietXuatData.temperature = temperature;
@@ -333,14 +339,14 @@ contract SupplyChain {
     
     /*get chietXuat data*/
     function getChietXuatData(uint256 batchNo) public view returns (
-                                uint256 extractorNo,
+                                uint256 warehouseNo,
                                 uint256 roastingTime,
                                 uint256 grindingTime,
                                 uint256 temperature,
                                 uint256 packageDateTime){
         
         chietXuat memory tmpData = batchChietXuat[batchNo];
-        return (tmpData.extractorNo, tmpData.roastingTime, tmpData.grindingTime,tmpData.temperature,tmpData.packageDateTime);
+        return (tmpData.warehouseNo, tmpData.roastingTime, tmpData.grindingTime,tmpData.temperature,tmpData.packageDateTime);
     }
 
 
@@ -348,9 +354,11 @@ contract SupplyChain {
     /*set xuatKho data*/
     function setXuatKhoData(uint256 batchNo,
                                 uint256 distributorNo,
+                                uint256 exporterNo,
                                 uint256 quantity,
                                 uint256 exportDateTime) public returns(bool){
         xuatKhoData.distributorNo = distributorNo;
+        xuatKhoData.exporterNo = exporterNo;
         xuatKhoData.quantity = quantity;
         xuatKhoData.exportDateTime = exportDateTime;
         
@@ -364,11 +372,12 @@ contract SupplyChain {
     /*get xuatKho data*/
     function getXuatKhoData(uint256 batchNo) public view returns (
                                 uint256 distributorNo,
+                                uint256 exporterNo,
                                 uint256 quantity,
                                 uint256 exportDateTime){
         
         xuatKho memory tmpData = batchXuatKho[batchNo];
-        return (tmpData.distributorNo, tmpData.quantity, tmpData.exportDateTime);
+        return (tmpData.distributorNo, tmpData.exporterNo, tmpData.quantity, tmpData.exportDateTime);
     }
 
 }    
