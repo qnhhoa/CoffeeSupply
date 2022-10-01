@@ -1,0 +1,242 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "listFarmerAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "_checkExistFarmerAccount",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					}
+				],
+				"name": "addFarmer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "destroy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllFarmer",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "farmerId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "farmerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Farmer[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"controller/farmer/FarmerController.sol": "FarmerController"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"abstract/Ownable.sol": {
+			"keccak256": "0xd18541332063ae80622d2dae885641c5744a73440e922f8c7b0f27e9eda48479",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://443f4b34991a801646f9df38cd47fbf3c22928f24d2528466addaf49291feaf9",
+				"dweb:/ipfs/QmUtNkRcKKBbd8YGwB1hUumrVBVc3Q4qK2D2FhrbkpcaCT"
+			]
+		},
+		"constant/SecretKey.sol": {
+			"keccak256": "0x47ac9ee05d54b25ca31aa59b1c8088b442e3cab3023e013a9049bad3a4c85547",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9556d31ced35c1a557d8dad981fedfa8e672b8b5d1d29cf2d322958be517b832",
+				"dweb:/ipfs/QmbWeckHUBYBdFm18bVPv9ns5yKPSBm7kNKotLvKoo9ip4"
+			]
+		},
+		"controller/farmer/FarmerController.sol": {
+			"keccak256": "0x2804570182ed7e52fa24ce267a19aae5e30b62d6c84cfd4905f26b2cf472e18e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://462e438e77c7496bfb98d6d57d5e3bef9523ee28bec56ee9b3c8ca13cb1c296d",
+				"dweb:/ipfs/QmbsAekKS3YSM6E6shXZVyoJHb6VWCeF53vrgv4eWy2KKJ"
+			]
+		},
+		"cursor/farmer/ListFarmerCursor.sol": {
+			"keccak256": "0x5208e2dc14ba23f71d3b35d475b5065824378869c51b35d786c5619e226e37a9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://36112f0b280ac58df4b090e2005b3448a699da3f6b5a8c1e5fb6dd2e2c907aa4",
+				"dweb:/ipfs/QmQ1DGCHCLNFShX2to3sdED7rDMzeDQvm6DbShz8nGDqGp"
+			]
+		},
+		"cursor/farmer/ListHarvesterCursor.sol": {
+			"keccak256": "0x034a1bd1a7749e7856f3ab0fdc4e52b3f72923d795ef0c5978dcffe3f9bbdde1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4af8b0cea4570ffade2ee9f8598986abab9d1665a947e402898e5384316e9fb2",
+				"dweb:/ipfs/QmZQxKnCDyQ1wn7hTPKcJjtVcfR12dYN3TBsRgpsYxYVEu"
+			]
+		},
+		"database/farmer/ListFarmer.sol": {
+			"keccak256": "0xab68bbce99ac04f00cd6a2ddf979a9db87071fc069e39b8bbe97eec5434b5e37",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e7ff278a524f4cb882523661ff2665bcf4c7eb919b43783c965ce0da270f48f4",
+				"dweb:/ipfs/QmfDhrdHvMUsut75hCsFqc5o7n2H4zBHNbycs5UTX5yRQg"
+			]
+		},
+		"database/farmer/ListHarvester.sol": {
+			"keccak256": "0x6cd78df2627c9fddf809515310f981203efd387b461c107d685949ef496fb8f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7f23c291399a12a65d6a492f4df4be1d935899905b1310cedf9615c46fe4a1ab",
+				"dweb:/ipfs/QmZfZuzy2JbDrWKFRJRcydqCUdVMzUqELpHQqz5UiZK9zj"
+			]
+		},
+		"struct/farmer/Farmer.sol": {
+			"keccak256": "0xb456e8686f265481319881321e91eb30bf6a9ff7a48987305ca8292f1ca64753",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://126e4156a1a1fbdffb83e561d7d2a5ca7a6db1141c665960659a79faa76a47dd",
+				"dweb:/ipfs/QmNffWNC19mhfWd2xpJ6yYMuGdYK4FMN1iQ8XAFArCt68F"
+			]
+		},
+		"struct/farmer/Harvester.sol": {
+			"keccak256": "0x892a6a335cc500cf72921fd5b8c275113eb041ebea3281ffab0916d5e1032f44",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0f4d3fa94dfb2f3a965020079ab248d0250364e6558b7c3e60016ef9399e245a",
+				"dweb:/ipfs/QmP8fybKJLD9HPxfRkhTJ5TtRVBBkQqvuaf2sbecPzapsG"
+			]
+		}
+	},
+	"version": 1
+}

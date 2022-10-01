@@ -1,0 +1,164 @@
+{
+	"id": "9bbdb314c43863da84e5c852c6d8cc91",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.16",
+	"solcLongVersion": "0.8.16+commit.07a7930e",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"constant/SecretKey.sol": {
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity >=0.8.12 <0.9.0;\n\n//i am a hero\nbytes32 constant LOGIN_TOKEN_KEY = 0xb01f9b611f7ac2b776862392c379c517871f5150c7cf66cd48bdb1ff6857381a;\n\n//i love flower\nbytes32 constant DATABASE_KEY = 0x8e1604a838d0f1a9b2cda14a099e4ceb08e966cc6e05e8296f67b02d61a79f09;\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": true,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"constant/SecretKey.sol": {
+				"ast": {
+					"absolutePath": "constant/SecretKey.sol",
+					"exportedSymbols": {
+						"DATABASE_KEY": [
+							7
+						],
+						"LOGIN_TOKEN_KEY": [
+							4
+						]
+					},
+					"id": 8,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.8",
+								".12",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "32:32:0"
+						},
+						{
+							"constant": true,
+							"id": 4,
+							"mutability": "constant",
+							"name": "LOGIN_TOKEN_KEY",
+							"nameLocation": "97:15:0",
+							"nodeType": "VariableDeclaration",
+							"scope": 8,
+							"src": "80:101:0",
+							"stateVariable": false,
+							"storageLocation": "default",
+							"typeDescriptions": {
+								"typeIdentifier": "t_bytes32",
+								"typeString": "bytes32"
+							},
+							"typeName": {
+								"id": 2,
+								"name": "bytes32",
+								"nodeType": "ElementaryTypeName",
+								"src": "80:7:0",
+								"typeDescriptions": {
+									"typeIdentifier": "t_bytes32",
+									"typeString": "bytes32"
+								}
+							},
+							"value": {
+								"hexValue": "307862303166396236313166376163326237373638363233393263333739633531373837316635313530633763663636636434386264623166663638353733383161",
+								"id": 3,
+								"isConstant": false,
+								"isLValue": false,
+								"isPure": true,
+								"kind": "number",
+								"lValueRequested": false,
+								"nodeType": "Literal",
+								"src": "115:66:0",
+								"typeDescriptions": {
+									"typeIdentifier": "t_rational_79662905998776775347241219818511732122397618752811156801308967478884350507034_by_1",
+									"typeString": "int_const 7966...(69 digits omitted)...7034"
+								},
+								"value": "0xb01f9b611f7ac2b776862392c379c517871f5150c7cf66cd48bdb1ff6857381a"
+							},
+							"visibility": "internal"
+						},
+						{
+							"constant": true,
+							"id": 7,
+							"mutability": "constant",
+							"name": "DATABASE_KEY",
+							"nameLocation": "217:12:0",
+							"nodeType": "VariableDeclaration",
+							"scope": 8,
+							"src": "200:98:0",
+							"stateVariable": false,
+							"storageLocation": "default",
+							"typeDescriptions": {
+								"typeIdentifier": "t_bytes32",
+								"typeString": "bytes32"
+							},
+							"typeName": {
+								"id": 5,
+								"name": "bytes32",
+								"nodeType": "ElementaryTypeName",
+								"src": "200:7:0",
+								"typeDescriptions": {
+									"typeIdentifier": "t_bytes32",
+									"typeString": "bytes32"
+								}
+							},
+							"value": {
+								"hexValue": "307838653136303461383338643066316139623263646131346130393965346365623038653936366363366530356538323936663637623032643631613739663039",
+								"id": 6,
+								"isConstant": false,
+								"isLValue": false,
+								"isPure": true,
+								"kind": "number",
+								"lValueRequested": false,
+								"nodeType": "Literal",
+								"src": "232:66:0",
+								"typeDescriptions": {
+									"typeIdentifier": "t_rational_64267327276488821755528506146346736668774351852096600332388590821248701275913_by_1",
+									"typeString": "int_const 6426...(69 digits omitted)...5913"
+								},
+								"value": "0x8e1604a838d0f1a9b2cda14a099e4ceb08e966cc6e05e8296f67b02d61a79f09"
+							},
+							"visibility": "internal"
+						}
+					],
+					"src": "32:268:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

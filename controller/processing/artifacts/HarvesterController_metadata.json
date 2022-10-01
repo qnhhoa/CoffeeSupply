@@ -1,0 +1,218 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "listHarvesterAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "_checkExistHarvesterAccount",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					}
+				],
+				"name": "addHarvester",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "destroy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllHarvester",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "harvesterId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "harvesterAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Harvester[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"controller/farmer/HarvesterController.sol": "HarvesterController"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"abstract/Ownable.sol": {
+			"keccak256": "0xd18541332063ae80622d2dae885641c5744a73440e922f8c7b0f27e9eda48479",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://443f4b34991a801646f9df38cd47fbf3c22928f24d2528466addaf49291feaf9",
+				"dweb:/ipfs/QmUtNkRcKKBbd8YGwB1hUumrVBVc3Q4qK2D2FhrbkpcaCT"
+			]
+		},
+		"constant/SecretKey.sol": {
+			"keccak256": "0x47ac9ee05d54b25ca31aa59b1c8088b442e3cab3023e013a9049bad3a4c85547",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9556d31ced35c1a557d8dad981fedfa8e672b8b5d1d29cf2d322958be517b832",
+				"dweb:/ipfs/QmbWeckHUBYBdFm18bVPv9ns5yKPSBm7kNKotLvKoo9ip4"
+			]
+		},
+		"controller/farmer/HarvesterController.sol": {
+			"keccak256": "0xe1bb0484687c378919173e1cc7b8dbed748caf9df0dc60e5e9c4759729b8d8f6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aecab0f785c7d26c670edd2faf7baaaeca10858f96d105d098d53b6e12c5b8c9",
+				"dweb:/ipfs/QmVuFAkR9BHiFZvaKARFhJ85abTdLPBYmC4svmhtW7asPu"
+			]
+		},
+		"cursor/farmer/ListHarvesterCursor.sol": {
+			"keccak256": "0x034a1bd1a7749e7856f3ab0fdc4e52b3f72923d795ef0c5978dcffe3f9bbdde1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4af8b0cea4570ffade2ee9f8598986abab9d1665a947e402898e5384316e9fb2",
+				"dweb:/ipfs/QmZQxKnCDyQ1wn7hTPKcJjtVcfR12dYN3TBsRgpsYxYVEu"
+			]
+		},
+		"database/farmer/ListHarvester.sol": {
+			"keccak256": "0x6cd78df2627c9fddf809515310f981203efd387b461c107d685949ef496fb8f4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7f23c291399a12a65d6a492f4df4be1d935899905b1310cedf9615c46fe4a1ab",
+				"dweb:/ipfs/QmZfZuzy2JbDrWKFRJRcydqCUdVMzUqELpHQqz5UiZK9zj"
+			]
+		},
+		"struct/farmer/Harvester.sol": {
+			"keccak256": "0x892a6a335cc500cf72921fd5b8c275113eb041ebea3281ffab0916d5e1032f44",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0f4d3fa94dfb2f3a965020079ab248d0250364e6558b7c3e60016ef9399e245a",
+				"dweb:/ipfs/QmP8fybKJLD9HPxfRkhTJ5TtRVBBkQqvuaf2sbecPzapsG"
+			]
+		}
+	},
+	"version": 1
+}

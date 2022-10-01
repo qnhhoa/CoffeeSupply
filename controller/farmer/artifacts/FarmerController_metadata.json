@@ -1,0 +1,536 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "farmerDatabaseContractAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					}
+				],
+				"name": "addFarmer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "prepareId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					}
+				],
+				"name": "addFolWarehouse",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "farmerId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "plantId",
+						"type": "uint256"
+					}
+				],
+				"name": "addHarvest",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "farmerId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum CATEGORY",
+						"name": "category",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "testTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "area",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "production",
+						"type": "uint256"
+					}
+				],
+				"name": "addPlant",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "farmerId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "listHarvestId",
+						"type": "uint256[]"
+					}
+				],
+				"name": "addPrepare",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "destroy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "farmerDatabase",
+				"outputs": [
+					{
+						"internalType": "contract FarmerDatabase",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getListFarmer",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "farmerId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "farmerAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Farmer[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getListFolWarehouse",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "prepareId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "time",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quantity",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FolWarehouse[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getListHarvest",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "harvestId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "farmerId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "plantId",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Harvest[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getListPlant",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "plantId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "farmerId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum CATEGORY",
+								"name": "category",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "testTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "area",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "production",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Plant[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getListPrepare",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "prepareId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "farmerId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "listHarvestId",
+								"type": "uint256[]"
+							}
+						],
+						"internalType": "struct Prepare[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"controller/farmer/FarmerController.sol": "FarmerController"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"abstract/Ownable.sol": {
+			"keccak256": "0xd18541332063ae80622d2dae885641c5744a73440e922f8c7b0f27e9eda48479",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://443f4b34991a801646f9df38cd47fbf3c22928f24d2528466addaf49291feaf9",
+				"dweb:/ipfs/QmUtNkRcKKBbd8YGwB1hUumrVBVc3Q4qK2D2FhrbkpcaCT"
+			]
+		},
+		"constant/SecretKey.sol": {
+			"keccak256": "0x47ac9ee05d54b25ca31aa59b1c8088b442e3cab3023e013a9049bad3a4c85547",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9556d31ced35c1a557d8dad981fedfa8e672b8b5d1d29cf2d322958be517b832",
+				"dweb:/ipfs/QmbWeckHUBYBdFm18bVPv9ns5yKPSBm7kNKotLvKoo9ip4"
+			]
+		},
+		"controller/farmer/FarmerController.sol": {
+			"keccak256": "0x9940adcbe3b8fb8e49df1583ed00ea3cf7b0a019d0d0345e54ee1f61dfeab62c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://22ef75b0997b22a01541d0498243a3606000b2ea39b28372e731f695427bb609",
+				"dweb:/ipfs/QmYCUMfH4aKmu1HB2RiCwKH2nDwFPpYQkB3WpN3FfMDrB7"
+			]
+		},
+		"cursor/farmer/FarmerDatabaseCursor.sol": {
+			"keccak256": "0xfd235e0eb9e797d0ced4c01c4fae2e4e6de0cf61d48a8868bec6779ae6c6fb49",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0c68ae0614b0f337f98eb50d1820a4bd273500d56fc0b7550651540822ccada1",
+				"dweb:/ipfs/QmdXjS1eabFf53uhN22qSiRmKkSqynNacUQD2dYdNrfyhr"
+			]
+		},
+		"database/farmer/FarmerDatabase.sol": {
+			"keccak256": "0x704c4977194e7af4b47b6597025289a0514d37dfe2fbddd2144c40a2f988a17e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e8cccc1856f855d1433091ec797ef1dc0a7f7209c17074fa792cd1fdf811484c",
+				"dweb:/ipfs/QmT9SHQ4xyAocc5Av8KG4L5wSKB5k5RUNn4qXeRuqZcqnH"
+			]
+		},
+		"struct/farmer/Farmer.sol": {
+			"keccak256": "0xb456e8686f265481319881321e91eb30bf6a9ff7a48987305ca8292f1ca64753",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://126e4156a1a1fbdffb83e561d7d2a5ca7a6db1141c665960659a79faa76a47dd",
+				"dweb:/ipfs/QmNffWNC19mhfWd2xpJ6yYMuGdYK4FMN1iQ8XAFArCt68F"
+			]
+		},
+		"struct/farmer/FolWarehouse.sol": {
+			"keccak256": "0x06b68436a756b303cfb8677798c1fa87d7133034b4653007fe5132bd7c022576",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2d4d60019840e20324f0dc059fadf31b4769631eda12f2dfe415ad52abdadd1f",
+				"dweb:/ipfs/QmawQmnrf3C8yDibNpau9te8RFd21ydHXZzotFAo9kpLjc"
+			]
+		},
+		"struct/farmer/Harvest.sol": {
+			"keccak256": "0x66976b80089906fe2ee5e1b40ae1d18b5f70a6825ea6c7d1dfc40f39e0c8e258",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://31bf8e600a0159ad85084a06b3cf71bde4b1de131e648f7ab74a80afe306ac41",
+				"dweb:/ipfs/QmNaPaEfm8hYMRtPXJMniW8v6X3aXCAs4QTRrfnbG46SpR"
+			]
+		},
+		"struct/farmer/Plant.sol": {
+			"keccak256": "0x7f240c70c93fbc53c8066c9a93e280dc3412f94cb6daa45c7357a77775b3e704",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1ef627716210f42cc16a1816c670b3185dcf3e6a1affe7e538f3df68fc5bdbd8",
+				"dweb:/ipfs/QmT1VuMgW5kFyn5MqwJc1fXzbDzVVFKVkhiY8mVyvzfqHV"
+			]
+		},
+		"struct/farmer/Prepare.sol": {
+			"keccak256": "0x81915efbb3d6d70d94731bf15484f720ee867e44db6ecb7d694a3f60d6671d3e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://45abf302ed9bfddbb0cc1014ddbef7a4cbc09417802bb7d20116a76c9ee4fd42",
+				"dweb:/ipfs/QmawerVKS6efA1R7ca3vbmZ1Xb4jH8ZKPawKBb1FtKT1D3"
+			]
+		}
+	},
+	"version": 1
+}

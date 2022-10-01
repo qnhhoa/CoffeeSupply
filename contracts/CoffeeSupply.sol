@@ -120,7 +120,7 @@ contract SupplyChain {
     cheBien cheBienData; 
     chietXuat chietXuatData;
     
-    
+   
     // function concat(string memory _a, string memory _b) public returns (string memory){
     //     bytes memory bytes_a = bytes(_a);
     //     bytes memory bytes_b = bytes(_b);

@@ -1,0 +1,464 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "processingDatabaseContractAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "processingId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					}
+				],
+				"name": "addFolWarehouse",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "processorId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "listbatchId",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "time",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					}
+				],
+				"name": "addPreWarehouse",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "processorId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "listBatchId",
+						"type": "uint256[]"
+					}
+				],
+				"name": "addProcessing",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					}
+				],
+				"name": "addProcessor",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "destroy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getListFolWarehouse",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "processingId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "time",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quantity",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FolWarehouse[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getListPreWarehouse",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "processorId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "listbatchId",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "time",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quantity",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct PreWarehouse[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getListProcessing",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "processingId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "processorId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "listBatchId",
+								"type": "uint256[]"
+							}
+						],
+						"internalType": "struct Processing[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getListProcessor",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "processorId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "processorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Processor[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "processingDatabase",
+				"outputs": [
+					{
+						"internalType": "contract ProcessingDatabase",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"controller/processing/ProcessingController.sol": "ProcessingController"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"abstract/Ownable.sol": {
+			"keccak256": "0xd18541332063ae80622d2dae885641c5744a73440e922f8c7b0f27e9eda48479",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://443f4b34991a801646f9df38cd47fbf3c22928f24d2528466addaf49291feaf9",
+				"dweb:/ipfs/QmUtNkRcKKBbd8YGwB1hUumrVBVc3Q4qK2D2FhrbkpcaCT"
+			]
+		},
+		"constant/SecretKey.sol": {
+			"keccak256": "0x47ac9ee05d54b25ca31aa59b1c8088b442e3cab3023e013a9049bad3a4c85547",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9556d31ced35c1a557d8dad981fedfa8e672b8b5d1d29cf2d322958be517b832",
+				"dweb:/ipfs/QmbWeckHUBYBdFm18bVPv9ns5yKPSBm7kNKotLvKoo9ip4"
+			]
+		},
+		"controller/processing/ProcessingController.sol": {
+			"keccak256": "0xe5668690ff349dde39695f199adb44f92c7432cf00d75830ba3c06802d724633",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4ba2331cead429df76b0dda16684dc33f0b5cd3ca0f70e2722319ce3c578fc61",
+				"dweb:/ipfs/QmYiJqYfDFGkQkC5xLcCstiEJdDt5X4h4PeBhxdNSkMdLB"
+			]
+		},
+		"cursor/processing/ProcessingDatabaseCursor.sol": {
+			"keccak256": "0x5b063497a3a6e066e2edbefdbd8457712633f3cddbf1676c3fcfcec40cc14040",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b0717bb0ca97faee47b5dbcd6b5f80d95fc9dd146cff03121549467cab88409e",
+				"dweb:/ipfs/QmZNLzWv8H2v2dChz8GeF6EF1gJStqJyVEbRUXwSRNP5Yx"
+			]
+		},
+		"database/processing/ProcessingDatabase.sol": {
+			"keccak256": "0x82458ed83ae588a0f83ae1fce03ff6c6d672cac1806319242a00a930167a0934",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e7428a55cfa8e73160fcc9464bf88b9beddd82c5310afaa84e874452fdb7f548",
+				"dweb:/ipfs/QmVonARX8qNwrwKQ55JivUyUDBWMRRNNMnteVsnVRBaRf5"
+			]
+		},
+		"struct/processing/FolWarehouse.sol": {
+			"keccak256": "0xa7673df2d3d0393c8f2bee1812ec6738456b2559dd79dd977aa018e0788ade85",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://039c21da18061d45f586476c105567ab3574f59e22432d28d94f24777bc4de7d",
+				"dweb:/ipfs/QmYVHDZtqvZuceWAVaHMmemHnhXb9wuxtdqtJndUqQ8dcY"
+			]
+		},
+		"struct/processing/PreWarehouse.sol": {
+			"keccak256": "0xe2c64cf7c5b67b75257e0ee30624ad196eac77165e3a81ded496da5407105744",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce39ecb8c0358550eb25e2676e8dfe84789ffea88f00f473b08f7eb17d20424c",
+				"dweb:/ipfs/QmeXupWVaqAtzQtJ8sKHeL2eNmThVpsYY2Ea75dJ9rj7sZ"
+			]
+		},
+		"struct/processing/Processing.sol": {
+			"keccak256": "0x88241f7f6eb16885d091e8e7e5768de928cee9fc0088557f5c041d6a03929ab2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7fcf61ace74053663c0c4f102a6e1fa0f26e167c1e210e83890f40d6865e7a3e",
+				"dweb:/ipfs/QmV9Wkfzcs3EGxN7y9AxrdJWZuYHboYBoge4FrNe4L8MYM"
+			]
+		},
+		"struct/processing/Processor.sol": {
+			"keccak256": "0x7f51e5219fa76c5f615e3b4b5c07480ede59ffdb50bc5a1382828183ab3c6a2e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c3fe7db6f0c4ea14b4171ed67768096d44ccd5b5f98c6f8670cff6ff1f1c998d",
+				"dweb:/ipfs/QmVzVK6CskCWVfSQNKYjsLrt3Ei6nPxfHicKfcEk1rxA2y"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.16+commit.07a7930e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"library/StringTool.sol": "StringTool"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"library/StringTool.sol": {
+			"keccak256": "0xba28bfe32940b8da35668f974f8d26720eb5f4c1136141186924f80c21cdce4a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ab52bbe122cb04fba026c33527932c07173d879967658357cf3bb5b3ded6c93",
+				"dweb:/ipfs/QmeQj79Ao6SojtUfHiziLfNtU2C1baMRTmBep6gRQ2Hysi"
+			]
+		}
+	},
+	"version": 1
+}
