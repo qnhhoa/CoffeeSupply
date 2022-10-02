@@ -22,7 +22,7 @@ contract ProcessingController is Ownable, ProcessingDatabaseCursor {
 
     function addPreWarehouse(
         uint256 processorId,
-        uint256[] memory listbatchId,
+        uint256[] memory listBatchId,
         uint256 category,
         uint256 time,
         uint256 quantity
@@ -30,7 +30,7 @@ contract ProcessingController is Ownable, ProcessingDatabaseCursor {
         PreWarehouse memory item = PreWarehouse(
             0,
             processorId,
-            listbatchId,
+            listBatchId,
             category,
             time,
             quantity
