@@ -3,6 +3,7 @@ pragma solidity >=0.8.14 <0.9.0;
 
 import {Ownable} from "../../abstract/Ownable.sol";
 import {FarmerDatabaseCursor} from "../../cursor/farmer/FarmerDatabaseCursor.sol";
+import {Inspector} from "../../struct/farmer/Inspector.sol";
 import {Farmer} from "../../struct/farmer/Farmer.sol";
 import {Plant, CATEGORY} from "../../struct/farmer/Plant.sol";
 import {Harvest} from "../../struct/farmer/Harvest.sol";
@@ -16,8 +17,26 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         FarmerDatabaseCursor(farmerDatabaseContractAddress)
     {}
 
-    function addFarmer(uint256 category) public returns (bool) {
-        Farmer memory item = Farmer(0, msg.sender, category);
+    function addInspector(uint256 category) public returns (bool) {
+        Inspector memory item = Inspector(0, msg.sender, category);
+        return farmerDatabase.addInspector(item, DATABASE_KEY);
+    }
+
+    function addFarmer(
+        uint256 famrerIdentifyId,
+        string memory farmerName,
+        uint256 farmerPhone,
+        uint256 famrerAddress,
+        uint256 category
+    ) public returns (bool) {
+        Farmer memory item = Farmer(
+            0,
+            famrerIdentifyId,
+            farmerName,
+            farmerPhone,
+            famrerAddress,
+            category
+        );
         return farmerDatabase.addFarmer(item, DATABASE_KEY);
     }
 

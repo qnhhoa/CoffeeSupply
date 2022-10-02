@@ -7,9 +7,11 @@ import {Farmer} from "../../struct/farmer/Farmer.sol";
 import {Plant} from "../../struct/farmer/Plant.sol";
 import {Harvest} from "../../struct/farmer/Harvest.sol";
 import {Prepare} from "../../struct/farmer/Prepare.sol";
+import {Inspector} from "../../struct/farmer/Inspector.sol";
 import {FolWarehouse} from "../../struct/farmer/FolWarehouse.sol";
 
 contract FarmerDatabase is Ownable {
+    Inspector[] private listInspector;
     Farmer[] private listFarmer;
     Plant[] private listPlant;
     Harvest[] private listHarvest;
@@ -24,6 +26,16 @@ contract FarmerDatabase is Ownable {
             "Database FarmerDatabase: Secret key error"
         );
         _;
+    }
+
+    function addInspector(Inspector memory item, bytes32 secret)
+        public
+        requestSecretkey(secret)
+        returns (bool)
+    {
+        item.inspectorId = listInspector.length;
+        listInspector.push(item);
+        return true;
     }
 
     function addFarmer(Farmer memory item, bytes32 secret)

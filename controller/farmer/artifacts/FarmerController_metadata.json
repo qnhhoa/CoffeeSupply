@@ -39,6 +39,26 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "famrerIdentifyId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "farmerName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "farmerPhone",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "famrerAddress",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
 						"name": "category",
 						"type": "uint256"
 					}
@@ -107,6 +127,25 @@
 					}
 				],
 				"name": "addHarvest",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "category",
+						"type": "uint256"
+					}
+				],
+				"name": "addInspector",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -217,9 +256,24 @@
 								"type": "uint256"
 							},
 							{
-								"internalType": "address",
-								"name": "farmerAddress",
-								"type": "address"
+								"internalType": "uint256",
+								"name": "famrerIdentifyId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerName",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "farmerPhone",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "famrerAddress",
+								"type": "uint256"
 							},
 							{
 								"internalType": "uint256",
@@ -468,11 +522,11 @@
 			]
 		},
 		"controller/farmer/FarmerController.sol": {
-			"keccak256": "0x9940adcbe3b8fb8e49df1583ed00ea3cf7b0a019d0d0345e54ee1f61dfeab62c",
+			"keccak256": "0x3f7e77f378b7f35c412ca7ca260e721f02ccc16f79b34a83b54122d1db5939ed",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://22ef75b0997b22a01541d0498243a3606000b2ea39b28372e731f695427bb609",
-				"dweb:/ipfs/QmYCUMfH4aKmu1HB2RiCwKH2nDwFPpYQkB3WpN3FfMDrB7"
+				"bzz-raw://c0da96b976e9c317707dcdfebd5e1c6be42bbd19c559f49294f0b14f9768d4e9",
+				"dweb:/ipfs/QmQGu9ZT1UmPkcZUnsctsHu1mGUd61SAVJ2PtaL9ReCH7y"
 			]
 		},
 		"cursor/farmer/FarmerDatabaseCursor.sol": {
@@ -484,19 +538,19 @@
 			]
 		},
 		"database/farmer/FarmerDatabase.sol": {
-			"keccak256": "0x704c4977194e7af4b47b6597025289a0514d37dfe2fbddd2144c40a2f988a17e",
+			"keccak256": "0x166b0fe130fc507404a39fc266c1ae424b168765c007e7c19ea1a0d8f6173284",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e8cccc1856f855d1433091ec797ef1dc0a7f7209c17074fa792cd1fdf811484c",
-				"dweb:/ipfs/QmT9SHQ4xyAocc5Av8KG4L5wSKB5k5RUNn4qXeRuqZcqnH"
+				"bzz-raw://358ee6913fa78a1450d4b1c6ed5901eb57112d5475907f61328634d4e858201f",
+				"dweb:/ipfs/QmRWQrictRmJCKhy3r1tpHWECYJHMktyf1snd9JY8gvh7x"
 			]
 		},
 		"struct/farmer/Farmer.sol": {
-			"keccak256": "0xb456e8686f265481319881321e91eb30bf6a9ff7a48987305ca8292f1ca64753",
+			"keccak256": "0x4e3c4b3f89afa2f2fa60342ce995fff58614957273504a8a23fa784e6bebe12f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://126e4156a1a1fbdffb83e561d7d2a5ca7a6db1141c665960659a79faa76a47dd",
-				"dweb:/ipfs/QmNffWNC19mhfWd2xpJ6yYMuGdYK4FMN1iQ8XAFArCt68F"
+				"bzz-raw://485634c3b88024d7b52f39d653b5c7199610cb2ce4a4024ea106eaaa07ffef2b",
+				"dweb:/ipfs/QmYk2KnFwEdm516Z2W9MFrLRHMRbJZCVqdoDeuP9gXg6kb"
 			]
 		},
 		"struct/farmer/FolWarehouse.sol": {
@@ -513,6 +567,14 @@
 			"urls": [
 				"bzz-raw://31bf8e600a0159ad85084a06b3cf71bde4b1de131e648f7ab74a80afe306ac41",
 				"dweb:/ipfs/QmNaPaEfm8hYMRtPXJMniW8v6X3aXCAs4QTRrfnbG46SpR"
+			]
+		},
+		"struct/farmer/Inspector.sol": {
+			"keccak256": "0x8318fada4e0d8458e76b71643d4caf15adec1f70f818b3417d0a32210bcbcd69",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://38d49a4ee4fbbaf212807aaf64444a69ac39ae6c0f98dfec8785cf5e25a2254d",
+				"dweb:/ipfs/QmXUS5P5SgDauv6MxjxbTuP8A1PQe42nYA7uYKiymUFxjr"
 			]
 		},
 		"struct/farmer/Plant.sol": {
