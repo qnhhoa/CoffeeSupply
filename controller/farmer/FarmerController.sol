@@ -28,7 +28,7 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         uint256 farmerPhone,
         uint256 famrerAddress,
         uint256 category
-    ) public returns (bool) {
+    ) public onlyInspector returns (bool) {
         Farmer memory item = Farmer(
             0,
             famrerIdentifyId,
@@ -46,7 +46,7 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         uint256 testTime,
         uint256 area,
         uint256 production
-    ) public returns (bool) {
+    ) public onlyInspector returns (bool) {
         Plant memory item = Plant(
             0,
             farmerId,
@@ -62,7 +62,7 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         uint256 farmerId,
         uint256 category,
         uint256 plantId
-    ) public returns (bool) {
+    ) public onlyInspector returns (bool) {
         Harvest memory item = Harvest(0, farmerId, category, plantId);
         return farmerDatabase.addHarvest(item, DATABASE_KEY);
     }
@@ -71,7 +71,7 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         uint256 farmerId,
         uint256 category,
         uint256[] memory listHarvestId
-    ) public returns (bool) {
+    ) public onlyInspector returns (bool) {
         Prepare memory item = Prepare(0, farmerId, category, listHarvestId);
         return farmerDatabase.addPrepare(item, DATABASE_KEY);
     }
@@ -81,7 +81,7 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         uint256 category,
         uint256 time,
         uint256 quantity
-    ) public returns (bool) {
+    ) public onlyInspector returns (bool) {
         FolWarehouse memory item = FolWarehouse(
             0,
             prepareId,

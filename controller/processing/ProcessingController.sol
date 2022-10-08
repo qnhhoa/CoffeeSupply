@@ -8,12 +8,18 @@ import {FolWarehouse} from "../../struct/processing/FolWarehouse.sol";
 import {PreWarehouse} from "../../struct/processing/PreWarehouse.sol";
 import {Processing} from "../../struct/processing/Processing.sol";
 import {Processor} from "../../struct/processing/Processor.sol";
+import {Inspector} from "../../struct/processing/Inspector.sol";
 
 contract ProcessingController is Ownable, ProcessingDatabaseCursor {
     constructor(address processingDatabaseContractAddress)
         Ownable()
         ProcessingDatabaseCursor(processingDatabaseContractAddress)
     {}
+    
+    function addInspector(uint256 category) public returns (bool) {
+        Inspector memory item = Inspector(0, msg.sender, category);
+        return processingDatabase.addInspector(item, DATABASE_KEY);
+    }
 
     function addProcessor(uint256 category) public returns (bool) {
         Processor memory item = Processor(0, msg.sender, category);

@@ -88,6 +88,15 @@ contract FarmerDatabase is Ownable {
         return true;
     }
 
+    function getListInspector(bytes32 secret)
+        public
+        view
+        requestSecretkey(secret)
+        returns (Inspector[] memory)
+    {
+        return listInspector;
+    }
+
     function getListFarmer(bytes32 secret)
         public
         view

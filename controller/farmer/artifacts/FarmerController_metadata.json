@@ -226,6 +226,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "checkInspector",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "destroy",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -522,27 +535,27 @@
 			]
 		},
 		"controller/farmer/FarmerController.sol": {
-			"keccak256": "0x3f7e77f378b7f35c412ca7ca260e721f02ccc16f79b34a83b54122d1db5939ed",
+			"keccak256": "0x2abe800328db6694a4930d20deee58b7efaf2222981ada4c8e300dd5bae9ef84",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c0da96b976e9c317707dcdfebd5e1c6be42bbd19c559f49294f0b14f9768d4e9",
-				"dweb:/ipfs/QmQGu9ZT1UmPkcZUnsctsHu1mGUd61SAVJ2PtaL9ReCH7y"
+				"bzz-raw://d2cfb43a715b4b684b6bdd8f43372d53fc9c2299892914c59a98c30db75fcbd3",
+				"dweb:/ipfs/QmYUdLso8WY9jg9e6KK2VWtY1WS4wze8YpT2hJ2PBT16QL"
 			]
 		},
 		"cursor/farmer/FarmerDatabaseCursor.sol": {
-			"keccak256": "0xfd235e0eb9e797d0ced4c01c4fae2e4e6de0cf61d48a8868bec6779ae6c6fb49",
+			"keccak256": "0x5cbc1ef870ad4ce2b06974e586a994ef112f7883a2e56c0d73e3db0295358b3b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0c68ae0614b0f337f98eb50d1820a4bd273500d56fc0b7550651540822ccada1",
-				"dweb:/ipfs/QmdXjS1eabFf53uhN22qSiRmKkSqynNacUQD2dYdNrfyhr"
+				"bzz-raw://5b504eae25cf028ec12059066a688e4d0320dfaaf3fe35e0ae79ae731197982c",
+				"dweb:/ipfs/QmNZWh7QP9T7yBUH8G3YauADWkYA4qZUgUXwbYfcVLmVqG"
 			]
 		},
 		"database/farmer/FarmerDatabase.sol": {
-			"keccak256": "0x166b0fe130fc507404a39fc266c1ae424b168765c007e7c19ea1a0d8f6173284",
+			"keccak256": "0xe9205ca8189360630a2f3b82d83bf5002230f6d3d51ac7f1b1ee080e2fa34a20",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://358ee6913fa78a1450d4b1c6ed5901eb57112d5475907f61328634d4e858201f",
-				"dweb:/ipfs/QmRWQrictRmJCKhy3r1tpHWECYJHMktyf1snd9JY8gvh7x"
+				"bzz-raw://42381994f93edfa56682ea9457b3a72104cf9404ee2b4cd7515df69b09cf23a8",
+				"dweb:/ipfs/QmfMgethHfEJFxguYQQF8hmeXqGpiCzwQbZR5unT3ATDQf"
 			]
 		},
 		"struct/farmer/Farmer.sol": {

@@ -9,8 +9,10 @@ import {Processing} from "../../struct/processing/Processing.sol";
 import {Processor} from "../../struct/processing/Processor.sol";
 import {FolWarehouse} from "../../struct/processing/FolWarehouse.sol";
 import {PreWarehouse} from "../../struct/processing/PreWarehouse.sol";
+import {Inspector} from "../../struct/processing/Inspector.sol";
 
 contract ProcessingDatabase is Ownable {
+    Inspector[] private listInspector;
     Processor[] private listProcessor;
     Processing[] private listProcessing;
     FolWarehouse[] private listFolWarehouse;
@@ -24,6 +26,16 @@ contract ProcessingDatabase is Ownable {
             "Database ProcessingDatabase: Secret key error"
         );
         _;
+    }
+
+    function addInspector(Inspector memory item, bytes32 secret)
+        public
+        requestSecretkey(secret)
+        returns (bool)
+    {
+        item.inspectorId = listInspector.length;
+        listInspector.push(item);
+        return true;
     }
 
     function addProcessor(Processor memory item, bytes32 secret)
@@ -64,6 +76,15 @@ contract ProcessingDatabase is Ownable {
         item.processingId = listProcessing.length;
         listProcessing.push(item);
         return true;
+    }
+
+    function getListInspector(bytes32 secret)
+        public
+        view
+        requestSecretkey(secret)
+        returns (Inspector[] memory)
+    {
+        return listInspector;
     }
 
     function getListProcessor(bytes32 secret)
