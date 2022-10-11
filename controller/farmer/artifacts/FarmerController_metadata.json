@@ -379,6 +379,41 @@
 			},
 			{
 				"inputs": [],
+				"name": "getListInspector",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "inspectorId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "inspectorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "enum AccountType",
+								"name": "accountType",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Inspector[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getListPlant",
 				"outputs": [
 					{
@@ -452,6 +487,41 @@
 						"internalType": "struct Prepare[]",
 						"name": "",
 						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "login",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "inspectorId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "inspectorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "enum AccountType",
+								"name": "accountType",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Inspector",
+						"name": "",
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
@@ -535,11 +605,11 @@
 			]
 		},
 		"controller/farmer/FarmerController.sol": {
-			"keccak256": "0x2abe800328db6694a4930d20deee58b7efaf2222981ada4c8e300dd5bae9ef84",
+			"keccak256": "0x04e12b0ea1f3c0469aab6a0efa9e83fa54c705d2840b6179549f1e43eaa87d38",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d2cfb43a715b4b684b6bdd8f43372d53fc9c2299892914c59a98c30db75fcbd3",
-				"dweb:/ipfs/QmYUdLso8WY9jg9e6KK2VWtY1WS4wze8YpT2hJ2PBT16QL"
+				"bzz-raw://ffb72d6b548f89560a5b464c22eb3df0824e45f548c11ce804614bd1c9ca2c22",
+				"dweb:/ipfs/Qmb5qWewiFXFEXpFHhm8TT5LdgZKfFvaN4kMPKwuseLvcW"
 			]
 		},
 		"cursor/farmer/FarmerDatabaseCursor.sol": {
@@ -556,6 +626,14 @@
 			"urls": [
 				"bzz-raw://42381994f93edfa56682ea9457b3a72104cf9404ee2b4cd7515df69b09cf23a8",
 				"dweb:/ipfs/QmfMgethHfEJFxguYQQF8hmeXqGpiCzwQbZR5unT3ATDQf"
+			]
+		},
+		"struct/AccountType.sol": {
+			"keccak256": "0x263d04cdbace2de5ac935bcf0a6a396673e65aab27a26a577e01545e73af4457",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8cc86a30dd87219c48a8fb7defb70eb2d4e65aee0cb7d0882c6c7c77d081b061",
+				"dweb:/ipfs/Qmf3ruC22ia6j5fTPN9QfYetHEYcagxHHi615xYSVk5e5o"
 			]
 		},
 		"struct/farmer/Farmer.sol": {
@@ -583,11 +661,11 @@
 			]
 		},
 		"struct/farmer/Inspector.sol": {
-			"keccak256": "0x8318fada4e0d8458e76b71643d4caf15adec1f70f818b3417d0a32210bcbcd69",
+			"keccak256": "0xd6417a481500cfc41257525a6dcbfb94619b1c4ec62117c3f910e8c9964ff539",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://38d49a4ee4fbbaf212807aaf64444a69ac39ae6c0f98dfec8785cf5e25a2254d",
-				"dweb:/ipfs/QmXUS5P5SgDauv6MxjxbTuP8A1PQe42nYA7uYKiymUFxjr"
+				"bzz-raw://3fbf2c555335dc476b5cd09471c832cb0314be249f2155b32e09a4af1b041d91",
+				"dweb:/ipfs/Qmbnqa2YPNBPJzQTBTUYcFPivm3hE7rZBf1f12GLtHh8bh"
 			]
 		},
 		"struct/farmer/Plant.sol": {

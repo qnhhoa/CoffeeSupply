@@ -9,15 +9,31 @@ import {PreWarehouse} from "../../struct/processing/PreWarehouse.sol";
 import {Processing} from "../../struct/processing/Processing.sol";
 import {Processor} from "../../struct/processing/Processor.sol";
 import {Inspector} from "../../struct/processing/Inspector.sol";
+import {AccountType} from "../../struct/AccountType.sol";
 
 contract ProcessingController is Ownable, ProcessingDatabaseCursor {
     constructor(address processingDatabaseContractAddress)
         Ownable()
         ProcessingDatabaseCursor(processingDatabaseContractAddress)
     {}
-    
+
+    function login() public view returns (Inspector memory) {
+        Inspector[] memory list = processingDatabase.getListInspector(
+            DATABASE_KEY
+        );
+        for (uint256 i = 0; i < list.length; i++) {
+            if (list[i].inspectorAddress == msg.sender) return list[i];
+        }
+        return Inspector(0, address(0), AccountType.NONE, 0);
+    }
+
     function addInspector(uint256 category) public returns (bool) {
-        Inspector memory item = Inspector(0, msg.sender, category);
+        Inspector memory item = Inspector(
+            0,
+            msg.sender,
+            AccountType.PROCESSING_INSPECTOR,
+            category
+        );
         return processingDatabase.addInspector(item, DATABASE_KEY);
     }
 
@@ -72,6 +88,16 @@ contract ProcessingController is Ownable, ProcessingDatabaseCursor {
             quantity
         );
         return processingDatabase.addFolWarehouse(item, DATABASE_KEY);
+    }
+
+    function getListInspector() public view returns (Inspector[] memory) {
+        Inspector[] memory list = processingDatabase.getListInspector(
+            DATABASE_KEY
+        );
+        for (uint256 i = 0; i < list.length; i++) {
+            list[i].inspectorAddress = address(0);
+        }
+        return list;
     }
 
     function getListProcessor() public view returns (Processor[] memory) {

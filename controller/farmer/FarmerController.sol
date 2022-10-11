@@ -10,6 +10,7 @@ import {Harvest} from "../../struct/farmer/Harvest.sol";
 import {Prepare} from "../../struct/farmer/Prepare.sol";
 import {FolWarehouse} from "../../struct/farmer/FolWarehouse.sol";
 import {DATABASE_KEY} from "../../constant/SecretKey.sol";
+import {AccountType} from "../../struct/AccountType.sol";
 
 contract FarmerController is Ownable, FarmerDatabaseCursor {
     constructor(address farmerDatabaseContractAddress)
@@ -17,8 +18,21 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         FarmerDatabaseCursor(farmerDatabaseContractAddress)
     {}
 
+    function login() public view returns (Inspector memory) {
+        Inspector[] memory list = farmerDatabase.getListInspector(DATABASE_KEY);
+        for (uint256 i = 0; i < list.length; i++) {
+            if (list[i].inspectorAddress == msg.sender) return list[i];
+        }
+        return Inspector(0, address(0), AccountType.NONE, 0);
+    }
+
     function addInspector(uint256 category) public returns (bool) {
-        Inspector memory item = Inspector(0, msg.sender, category);
+        Inspector memory item = Inspector(
+            0,
+            msg.sender,
+            AccountType.FARMER_INSPECTOR,
+            category
+        );
         return farmerDatabase.addInspector(item, DATABASE_KEY);
     }
 
@@ -90,6 +104,14 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
             quantity
         );
         return farmerDatabase.addFolWarehouse(item, DATABASE_KEY);
+    }
+
+    function getListInspector() public view returns (Inspector[] memory) {
+        Inspector[] memory list = farmerDatabase.getListInspector(DATABASE_KEY);
+        for (uint256 i = 0; i < list.length; i++) {
+            list[i].inspectorAddress = address(0);
+        }
+        return list;
     }
 
     function getListFarmer() public view returns (Farmer[] memory) {

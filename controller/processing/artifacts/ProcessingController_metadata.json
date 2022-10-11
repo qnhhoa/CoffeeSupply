@@ -237,6 +237,41 @@
 			},
 			{
 				"inputs": [],
+				"name": "getListInspector",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "inspectorId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "inspectorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "enum AccountType",
+								"name": "accountType",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Inspector[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getListPreWarehouse",
 				"outputs": [
 					{
@@ -347,6 +382,41 @@
 			},
 			{
 				"inputs": [],
+				"name": "login",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "inspectorId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "inspectorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "enum AccountType",
+								"name": "accountType",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Inspector",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -436,11 +506,11 @@
 			]
 		},
 		"controller/processing/ProcessingController.sol": {
-			"keccak256": "0x55903c3a5b3fab71c9518093b0622e24c937109715f83d42a92a6886f7ea0793",
+			"keccak256": "0xa52d300c5ec344f4a77e7d2e9d2d17a369ef12e3e183db9ceab707c09daced8f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3640461b6b0da76b4966138d24bc5bfc54469b005c2cf474f05289f51506d44c",
-				"dweb:/ipfs/QmRFm9ju1caH9JYQKkcrA7YBdLKyUA2EbTLmDxaAA8PEUp"
+				"bzz-raw://faddf4db5627aa4332f5ef28c2604d579dc2942c3390bba451f3b93c45b5b2a0",
+				"dweb:/ipfs/QmZaD3FzHoU5K93WJcFaGXdGom5DgdivDNHJmEudWhsXPJ"
 			]
 		},
 		"cursor/processing/ProcessingDatabaseCursor.sol": {
@@ -459,6 +529,14 @@
 				"dweb:/ipfs/QmYRK4aG1V3ijhQp4twnybwb4fhFW7qpH9gFYEdAVATyEU"
 			]
 		},
+		"struct/AccountType.sol": {
+			"keccak256": "0x263d04cdbace2de5ac935bcf0a6a396673e65aab27a26a577e01545e73af4457",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8cc86a30dd87219c48a8fb7defb70eb2d4e65aee0cb7d0882c6c7c77d081b061",
+				"dweb:/ipfs/Qmf3ruC22ia6j5fTPN9QfYetHEYcagxHHi615xYSVk5e5o"
+			]
+		},
 		"struct/processing/FolWarehouse.sol": {
 			"keccak256": "0xa7673df2d3d0393c8f2bee1812ec6738456b2559dd79dd977aa018e0788ade85",
 			"license": "MIT",
@@ -468,11 +546,11 @@
 			]
 		},
 		"struct/processing/Inspector.sol": {
-			"keccak256": "0x8318fada4e0d8458e76b71643d4caf15adec1f70f818b3417d0a32210bcbcd69",
+			"keccak256": "0xa0eeb2bdaf32cfa7420b48f0f2b6d690d6364196a9e09742822d3538db2632b2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://38d49a4ee4fbbaf212807aaf64444a69ac39ae6c0f98dfec8785cf5e25a2254d",
-				"dweb:/ipfs/QmXUS5P5SgDauv6MxjxbTuP8A1PQe42nYA7uYKiymUFxjr"
+				"bzz-raw://f0bf9b1cde2d2a0461ef7e210b4b78d2b3a1189b2d74e29c62fd2ef8d31edbc0",
+				"dweb:/ipfs/Qmcj1U4UKt8jroC3qtwXWKruzS6SFELSzN9jN6nMbfLTC5"
 			]
 		},
 		"struct/processing/PreWarehouse.sol": {

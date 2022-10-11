@@ -197,6 +197,11 @@
 								"type": "address"
 							},
 							{
+								"internalType": "enum AccountType",
+								"name": "accountType",
+								"type": "uint8"
+							},
+							{
 								"internalType": "uint256",
 								"name": "category",
 								"type": "uint256"
@@ -478,6 +483,47 @@
 						"type": "bytes32"
 					}
 				],
+				"name": "getListInspector",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "inspectorId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "inspectorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "enum AccountType",
+								"name": "accountType",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint256",
+								"name": "category",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Inspector[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "secret",
+						"type": "bytes32"
+					}
+				],
 				"name": "getListPlant",
 				"outputs": [
 					{
@@ -640,11 +686,19 @@
 			]
 		},
 		"database/farmer/FarmerDatabase.sol": {
-			"keccak256": "0x166b0fe130fc507404a39fc266c1ae424b168765c007e7c19ea1a0d8f6173284",
+			"keccak256": "0xe9205ca8189360630a2f3b82d83bf5002230f6d3d51ac7f1b1ee080e2fa34a20",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://358ee6913fa78a1450d4b1c6ed5901eb57112d5475907f61328634d4e858201f",
-				"dweb:/ipfs/QmRWQrictRmJCKhy3r1tpHWECYJHMktyf1snd9JY8gvh7x"
+				"bzz-raw://42381994f93edfa56682ea9457b3a72104cf9404ee2b4cd7515df69b09cf23a8",
+				"dweb:/ipfs/QmfMgethHfEJFxguYQQF8hmeXqGpiCzwQbZR5unT3ATDQf"
+			]
+		},
+		"struct/AccountType.sol": {
+			"keccak256": "0x263d04cdbace2de5ac935bcf0a6a396673e65aab27a26a577e01545e73af4457",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8cc86a30dd87219c48a8fb7defb70eb2d4e65aee0cb7d0882c6c7c77d081b061",
+				"dweb:/ipfs/Qmf3ruC22ia6j5fTPN9QfYetHEYcagxHHi615xYSVk5e5o"
 			]
 		},
 		"struct/farmer/Farmer.sol": {
@@ -672,11 +726,11 @@
 			]
 		},
 		"struct/farmer/Inspector.sol": {
-			"keccak256": "0x8318fada4e0d8458e76b71643d4caf15adec1f70f818b3417d0a32210bcbcd69",
+			"keccak256": "0xd6417a481500cfc41257525a6dcbfb94619b1c4ec62117c3f910e8c9964ff539",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://38d49a4ee4fbbaf212807aaf64444a69ac39ae6c0f98dfec8785cf5e25a2254d",
-				"dweb:/ipfs/QmXUS5P5SgDauv6MxjxbTuP8A1PQe42nYA7uYKiymUFxjr"
+				"bzz-raw://3fbf2c555335dc476b5cd09471c832cb0314be249f2155b32e09a4af1b041d91",
+				"dweb:/ipfs/Qmbnqa2YPNBPJzQTBTUYcFPivm3hE7rZBf1f12GLtHh8bh"
 			]
 		},
 		"struct/farmer/Plant.sol": {
