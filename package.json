@@ -1,0 +1,22 @@
+{
+  "name": "coffeesupply",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn remixd -s ./ -u https://remix.ethereum.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qnhhoa/CoffeeSupply.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qnhhoa/CoffeeSupply/issues"
+  },
+  "homepage": "https://github.com/qnhhoa/CoffeeSupply#readme",
+  "dependencies": {
+    "@remix-project/remixd": "^0.6.7"
+  }
+}

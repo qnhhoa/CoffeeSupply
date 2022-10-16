@@ -26,10 +26,14 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         return Inspector(0, address(0), AccountType.NONE, 0);
     }
 
-    function addInspector(uint256 category) public returns (bool) {
+    function addInspector(uint256 category, address inspectorAddress)
+        public
+        onlyOwner
+        returns (bool)
+    {
         Inspector memory item = Inspector(
             0,
-            msg.sender,
+            inspectorAddress,
             AccountType.FARMER_INSPECTOR,
             category
         );
