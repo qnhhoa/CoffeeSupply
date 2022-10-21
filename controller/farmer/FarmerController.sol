@@ -8,7 +8,7 @@ import {Farmer} from "../../struct/farmer/Farmer.sol";
 import {Plant, CATEGORY} from "../../struct/farmer/Plant.sol";
 import {Harvest} from "../../struct/farmer/Harvest.sol";
 import {Prepare} from "../../struct/farmer/Prepare.sol";
-import {FolWarehouse} from "../../struct/farmer/FolWarehouse.sol";
+import {Stored} from "../../struct/farmer/Stored.sol";
 import {DATABASE_KEY} from "../../constant/SecretKey.sol";
 import {AccountType} from "../../struct/AccountType.sol";
 
@@ -94,20 +94,20 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         return farmerDatabase.addPrepare(item, DATABASE_KEY);
     }
 
-    function addFolWarehouse(
+    function addStored(
         uint256 prepareId,
         uint256 category,
         uint256 time,
         uint256 quantity
     ) public onlyInspector returns (bool) {
-        FolWarehouse memory item = FolWarehouse(
+        Stored memory item = Stored(
             0,
             prepareId,
             category,
             time,
             quantity
         );
-        return farmerDatabase.addFolWarehouse(item, DATABASE_KEY);
+        return farmerDatabase.addStored(item, DATABASE_KEY);
     }
 
     function getListInspector() public view returns (Inspector[] memory) {
@@ -134,7 +134,7 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         return farmerDatabase.getListPrepare(DATABASE_KEY);
     }
 
-    function getListFolWarehouse() public view returns (FolWarehouse[] memory) {
-        return farmerDatabase.getListFolWarehouse(DATABASE_KEY);
+    function getListStored() public view returns (Stored[] memory) {
+        return farmerDatabase.getListStored(DATABASE_KEY);
     }
 }

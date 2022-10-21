@@ -8,7 +8,7 @@ import {Plant} from "../../struct/farmer/Plant.sol";
 import {Harvest} from "../../struct/farmer/Harvest.sol";
 import {Prepare} from "../../struct/farmer/Prepare.sol";
 import {Inspector} from "../../struct/farmer/Inspector.sol";
-import {FolWarehouse} from "../../struct/farmer/FolWarehouse.sol";
+import {Stored} from "../../struct/farmer/Stored.sol";
 
 contract FarmerDatabase is Ownable {
     Inspector[] private listInspector;
@@ -16,7 +16,7 @@ contract FarmerDatabase is Ownable {
     Plant[] private listPlant;
     Harvest[] private listHarvest;
     Prepare[] private listPrepare;
-    FolWarehouse[] private listFolWarehouse;
+    Stored[] private listStored;
 
     constructor() Ownable() {}
 
@@ -78,13 +78,13 @@ contract FarmerDatabase is Ownable {
         return true;
     }
 
-    function addFolWarehouse(FolWarehouse memory item, bytes32 secret)
+    function addStored(Stored memory item, bytes32 secret)
         public
         requestSecretkey(secret)
         returns (bool)
     {
-        item.batchId = listFolWarehouse.length;
-        listFolWarehouse.push(item);
+        item.batchId = listStored.length;
+        listStored.push(item);
         return true;
     }
 
@@ -133,12 +133,12 @@ contract FarmerDatabase is Ownable {
         return listPrepare;
     }
 
-    function getListFolWarehouse(bytes32 secret)
+    function getListStored(bytes32 secret)
         public
         view
         requestSecretkey(secret)
-        returns (FolWarehouse[] memory)
+        returns (Stored[] memory)
     {
-        return listFolWarehouse;
+        return listStored;
     }
 }

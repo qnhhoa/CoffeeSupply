@@ -3,11 +3,10 @@ pragma solidity >=0.8.12 <0.9.0;
 
 import {Ownable} from "../../abstract/Ownable.sol";
 import {DATABASE_KEY} from "../../constant/SecretKey.sol";
-import {FolWarehouse} from "../../struct/processing/FolWarehouse.sol";
+import {Stored} from "../../struct/processing/Stored.sol";
 import {PreWarehouse} from "../../struct/processing/PreWarehouse.sol";
 import {Processing} from "../../struct/processing/Processing.sol";
 import {Processor} from "../../struct/processing/Processor.sol";
-import {FolWarehouse} from "../../struct/processing/FolWarehouse.sol";
 import {PreWarehouse} from "../../struct/processing/PreWarehouse.sol";
 import {Inspector} from "../../struct/processing/Inspector.sol";
 
@@ -15,7 +14,7 @@ contract ProcessingDatabase is Ownable {
     Inspector[] private listInspector;
     Processor[] private listProcessor;
     Processing[] private listProcessing;
-    FolWarehouse[] private listFolWarehouse;
+    Stored[] private listStored;
     PreWarehouse[] private listPreWarehouse;
 
     constructor() Ownable() {}
@@ -58,13 +57,13 @@ contract ProcessingDatabase is Ownable {
         return true;
     }
 
-    function addFolWarehouse(FolWarehouse memory item, bytes32 secret)
+    function addStored(Stored memory item, bytes32 secret)
         public
         requestSecretkey(secret)
         returns (bool)
     {
-        item.batchId = listFolWarehouse.length;
-        listFolWarehouse.push(item);
+        item.batchId = listStored.length;
+        listStored.push(item);
         return true;
     }
 
@@ -105,13 +104,13 @@ contract ProcessingDatabase is Ownable {
         return listPreWarehouse;
     }
 
-    function getListFolWarehouse(bytes32 secret)
+    function getListStored(bytes32 secret)
         public
         view
         requestSecretkey(secret)
-        returns (FolWarehouse[] memory)
+        returns (Stored[] memory)
     {
-        return listFolWarehouse;
+        return listStored;
     }
 
     function getListProcessing(bytes32 secret)

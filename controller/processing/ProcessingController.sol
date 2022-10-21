@@ -4,7 +4,7 @@ pragma solidity >=0.8.14 <0.9.0;
 import {Ownable} from "../../abstract/Ownable.sol";
 import {ProcessingDatabaseCursor} from "../../cursor/processing/ProcessingDatabaseCursor.sol";
 import {DATABASE_KEY} from "../../constant/SecretKey.sol";
-import {FolWarehouse} from "../../struct/processing/FolWarehouse.sol";
+import {Stored} from "../../struct/processing/Stored.sol";
 import {PreWarehouse} from "../../struct/processing/PreWarehouse.sol";
 import {Processing} from "../../struct/processing/Processing.sol";
 import {Processor} from "../../struct/processing/Processor.sol";
@@ -74,20 +74,20 @@ contract ProcessingController is Ownable, ProcessingDatabaseCursor {
         return processingDatabase.addProcessing(item, DATABASE_KEY);
     }
 
-    function addFolWarehouse(
+    function addStored(
         uint256 processingId,
         uint256 category,
         uint256 time,
         uint256 quantity
     ) public returns (bool) {
-        FolWarehouse memory item = FolWarehouse(
+        Stored memory item = Stored(
             0,
             processingId,
             category,
             time,
             quantity
         );
-        return processingDatabase.addFolWarehouse(item, DATABASE_KEY);
+        return processingDatabase.addStored(item, DATABASE_KEY);
     }
 
     function getListInspector() public view returns (Inspector[] memory) {
@@ -104,8 +104,8 @@ contract ProcessingController is Ownable, ProcessingDatabaseCursor {
         return processingDatabase.getListProcessor(DATABASE_KEY);
     }
 
-    function getListFolWarehouse() public view returns (FolWarehouse[] memory) {
-        return processingDatabase.getListFolWarehouse(DATABASE_KEY);
+    function getListStored() public view returns (Stored[] memory) {
+        return processingDatabase.getListStored(DATABASE_KEY);
     }
 
     function getListProcessing() public view returns (Processing[] memory) {
