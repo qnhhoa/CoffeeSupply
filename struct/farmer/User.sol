@@ -6,5 +6,5 @@ struct User {
     string userName;
     uint256 userPhoneNumber;
     address userAdress;
-    uint256 passWord;
+    uint256 userRole;
 }

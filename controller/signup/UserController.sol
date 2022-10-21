@@ -24,14 +24,14 @@ contract UserController is Ownable, UserDatabaseCursor {
     function addUser(
         string memory userName,
         uint256 userPhoneNumber,
-        uint256 passWord
+        uint256 userRole
     ) public returns (bool) {
         User memory item = User(
             0,
             userName,
             userPhoneNumber,
             msg.sender,
-            passWord
+            userRole
         );
         return userDatabase.addUser(item, DATABASE_KEY);
     }
