@@ -3,9 +3,8 @@ pragma solidity >=0.8.12 <0.9.0;
 
 import {AccountType} from "../AccountType.sol";
 
-struct Inspector {
-    uint256 inspectorId;
-    address inspectorAddress;
+struct Importer {
+    uint256 importerId;
+    address importerAddress;
     AccountType accountType;
-    uint256 category;
 }
