@@ -13,6 +13,7 @@ import {Importer} from "../../struct/farmer/Importer.sol";
 contract ImportDatabase is Ownable {
     Importer[] private listImporter;
     Import[] private listImport;
+    uint256 private autoIncrement = 0;
     // Plant[] private listPlant;
     // Harvest[] private listHarvest;
     // Prepare[] private listPrepare;
@@ -43,8 +44,10 @@ contract ImportDatabase is Ownable {
         requestSecretkey(secret)
         returns (bool)
     {
-        item.userId = listImport.length;
+        item.importerId = listImport.length;
         listImport.push(item);
+        uint256 id = ++autoIncrement;
+        list.push(Warehouse(id, title));
         return true;
     }
 
