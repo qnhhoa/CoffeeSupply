@@ -6,13 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "FarmerDatabaseContractAddress",
-						"type": "address"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -38,12 +32,55 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "farmerAddress",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "farmerId",
+						"type": "uint256"
+					}
+				],
+				"name": "addChecked",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "farmerId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerAddress",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "farmerIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Farmer",
+						"name": "farmer",
+						"type": "tuple"
 					}
 				],
 				"name": "addFarmer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contractPermission",
+						"type": "address"
+					}
+				],
+				"name": "addPermission",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -53,19 +90,6 @@
 				"name": "destroy",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "farmerDatabase",
-				"outputs": [
-					{
-						"internalType": "contract FarmerDatabase",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -145,7 +169,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"controller/farmer/FarmerController.sol": "FarmerController"
+			"database/farmer/FarmerDatabase.sol": "FarmerDatabase"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -173,22 +197,6 @@
 			"urls": [
 				"bzz-raw://502ac1474c536c239c2cd669833cf6eef40c57f2b6ff7bc4ce78882d8cc4db20",
 				"dweb:/ipfs/QmWpcgXb1RAX7rGKfbSn1cuDhA5ToMaogDYFEFyJq5EvGF"
-			]
-		},
-		"controller/farmer/FarmerController.sol": {
-			"keccak256": "0x1dc879f7ebacd37ef6945f355ffe91ff561fc3a258c7e0f2b4078f13eeb8456c",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://3430bbff795fc962aab3627259c84aeedd1227af68a45716306bf0fd7fe64f6e",
-				"dweb:/ipfs/Qme9QR9DibrFXKNZiXspVFfgwEymZH2UtNiEqam6fiT1aU"
-			]
-		},
-		"cursor/Farmer/FarmerDatabaseCursor.sol": {
-			"keccak256": "0xbccfb8d6444f257039cf2a4ab0e2653e09497828bc159f463652722aec3e05e9",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://7b51613bfe10679cb02c585b1ec83b8f782dd9d1b40990337f772afbedcd3049",
-				"dweb:/ipfs/QmX4TAsWtkRtSQTsMQ2GsebTHq4gynxGHh1TodiAam9bxM"
 			]
 		},
 		"database/farmer/FarmerDatabase.sol": {
