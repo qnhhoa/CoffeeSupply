@@ -29,4 +29,13 @@ contract ProcessingController is
     function getAllWarehouse() public view returns (Warehouse[] memory) {
         return warehouseDatabase.getAllWarehouse();
     }
+
+    function addIngress(string memory ingressAddress) public {
+        Ingress memory item = Ingress(0, ingressAddress, false);
+        return ingressDatabase.addIngress(item);
+    }
+
+    function getAllIngress() public view returns (Ingress[] memory) {
+        return ingressDatabase.getAllIngress();
+    }
 }
