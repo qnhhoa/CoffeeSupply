@@ -31,7 +31,7 @@ contract ProcessingController is
     }
 
     function addIngress(string memory ingressAddress) public {
-        Ingress memory item = Ingress(0, ingressAddress, false);
+        Ingress memory item = Ingress(0,userId, farmerId, ingressDate, ingressAddress, false);
         return ingressDatabase.addIngress(item);
     }
 

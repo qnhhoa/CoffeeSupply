@@ -5,6 +5,6 @@ struct Squeeze {
     uint256 batchId;
     uint256 userId;
     uint256 squeezeDate;
-    uint256 squeezeQuantity;
+    string squeezeAddress;
     bool squezeIsChecked;
 }

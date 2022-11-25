@@ -6,6 +6,6 @@ struct Ingress {
     uint256 userId;
     uint256 farmerId;
     uint256 ingressDate;
-    uint256 ingressQuantity;
+    string ingressAddress;
     bool ingressIsChecked;
 }
