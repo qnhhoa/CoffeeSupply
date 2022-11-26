@@ -5,6 +5,6 @@ struct Rough {
     uint256 batchId;
     uint256 userId;
     uint256 roughDate;
-    uint256 roughQuantity;
+    string roughAdress;
     bool roughIsChecked;
 }

@@ -6,18 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "warehouseDatabaseContractAddress",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "ingressDatabaseContractAddress",
-						"type": "address"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -44,26 +33,11 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "userId",
+						"name": "warehouseId",
 						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "farmerId",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "ingressDate",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "ingressAddress",
-						"type": "string"
 					}
 				],
-				"name": "addIngress",
+				"name": "addChecked",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -71,9 +45,39 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "warehouseAddress",
-						"type": "string"
+						"internalType": "address",
+						"name": "contractPermission",
+						"type": "address"
+					}
+				],
+				"name": "addPermission",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "warehouseId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "warehoustAddress",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "warehouseIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Warehouse",
+						"name": "warehouse",
+						"type": "tuple"
 					}
 				],
 				"name": "addWarehouse",
@@ -86,51 +90,6 @@
 				"name": "destroy",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getAllIngress",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "batchId",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "userId",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "farmerId",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "ingressDate",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "ingressAddress",
-								"type": "string"
-							},
-							{
-								"internalType": "bool",
-								"name": "ingressIsChecked",
-								"type": "bool"
-							}
-						],
-						"internalType": "struct Ingress[]",
-						"name": "",
-						"type": "tuple[]"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -165,19 +124,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "ingressDatabase",
-				"outputs": [
-					{
-						"internalType": "contract IngressDatabase",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -201,19 +147,6 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "warehouseDatabase",
-				"outputs": [
-					{
-						"internalType": "contract WarehouseDatabase",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -236,7 +169,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"controller/processing/ProcessingController.sol": "ProcessingController"
+			"database/processing/WarehouseDatabase.sol": "WarehouseDatabase"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -266,52 +199,12 @@
 				"dweb:/ipfs/QmQijbEMGKt7R3L4fARqZTSD41Ah7dn5Lf6G3q9JWwEmgx"
 			]
 		},
-		"controller/processing/ProcessingController.sol": {
-			"keccak256": "0xc9448be743f4b1fa459dc4ce4d06a3e3fc014ef79cee2fad3167710140098c1e",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://21f231fb61478c569fa48e5898d2a502f7d577ce4caf01fb2f6688593e6cc8d6",
-				"dweb:/ipfs/QmaD5TpyDGezw9a1bgDrANX2vkXnkFAi1xne1pD3rw85tU"
-			]
-		},
-		"cursor/processing/IngressDatabaseCursor.sol": {
-			"keccak256": "0xbfe6448c39f9fad9e374e65d0867cab931792cc8a8762aaec69fedcf68f26576",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://7a078812a3fcd5ea39bda9d41ad0681b62700b53ee2b81404a5c55683e8ccb76",
-				"dweb:/ipfs/QmTgRmUkfVKTD7vci8jQsvxYL7UMsyLQ6RK7KmCgxqGUVf"
-			]
-		},
-		"cursor/processing/WarehouseDatabaseCursor.sol": {
-			"keccak256": "0x51eea456ca1ae621b6f9aa6985e17c26b5de502facffa9516aadd0feed3ee831",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://7afe58ffe95873112915f712d0afdccc63fced493116e6dfd1c419e6e10af087",
-				"dweb:/ipfs/QmeLVBPzQRfTQW6w56EhQpkqE1aupj5TNofDTFpHJEEEd4"
-			]
-		},
-		"database/processing/IngressDatabase.sol": {
-			"keccak256": "0x4b7b9da4e7e2cee35a3870311ecb80167da72e3f5204d74565cc242ec35e7506",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://31f469ffad9571642a07f78e08eb43f3d00132425c20230207de683a70c11039",
-				"dweb:/ipfs/QmZ2hgyPWPbeRyBAL1YDqX99hh6eZFMJgakWjPzsvvkAtf"
-			]
-		},
 		"database/processing/WarehouseDatabase.sol": {
 			"keccak256": "0xac238056cc2a7393b758cf01b945088b57a1066806ab7250fbcdc21105930f06",
 			"license": "MIT",
 			"urls": [
 				"bzz-raw://8eda75bf85178667a70bb48ef4967affce8bbc252a17b026ef993fbd56d72199",
 				"dweb:/ipfs/QmYnXh9A5Wwo1jCbdFckpTFTjcWfmXKqzayadihJPNQ4pT"
-			]
-		},
-		"struct/processing/Ingress.sol": {
-			"keccak256": "0xcc9f8dae8e401e318fdcfab9ed098faf4f050a4fc029718b4642fa5afbbf2394",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://b11f034e119fc48c0f3eb0c7109b764da5a5f7f7670d222c0580453c0cd1606f",
-				"dweb:/ipfs/Qmc8TY4DWZRiYt87XhGabDt6wnEquMjMz614FWj3ZPVRdZ"
 			]
 		},
 		"struct/processing/Warehouse.sol": {

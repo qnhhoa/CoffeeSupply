@@ -5,6 +5,6 @@ struct Dry {
     uint256 batchId;
     uint256 userId;
     uint256 dryDate;
-    uint256 dryQuantity;
+    string dryAddress;
     bool dryIsChecked;
 }
