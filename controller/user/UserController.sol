@@ -10,7 +10,7 @@ contract UserController is Ownable, UserDatabaseCursor {
         Ownable()
         UserDatabaseCursor(userDatabaseContractAddress)
     {}
-
+    
     function login() public view returns (User memory) {
         User[] memory list = userDatabase.getAllUser();
         for (uint256 i = 0; i < list.length; i++) {
@@ -20,7 +20,7 @@ contract UserController is Ownable, UserDatabaseCursor {
     }
 
     function addUser(uint256 userCatergory) public {
-        User memory item = User(0, _msgSender(), userCatergory, false);
+        User memory item = User(0, _msgSender(), userCatergory, true);
         userDatabase.addUser(item);
     }
 

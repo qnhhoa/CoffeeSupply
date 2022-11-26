@@ -31,8 +31,8 @@ contract ProcessingController is
     }
 
     function addIngress(string memory ingressAddress) public {
-        Ingress memory item = Ingress(0, ingressAddress, false);
-        return ingressDatabase.addIngress(item);
+        Ingress memory item = Ingress(ingressAddress, false);
+        return ingressDatabase.addIngress(item);x
     }
 
     function getAllIngress() public view returns (Ingress[] memory) {
