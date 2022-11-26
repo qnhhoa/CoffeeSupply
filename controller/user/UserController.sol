@@ -20,7 +20,7 @@ contract UserController is Ownable, UserDatabaseCursor {
     }
 
     function addUser(uint256 userCatergory) public {
-        User memory item = User(0, _msgSender(), userCatergory, true);
+        User memory item = User(0, _msgSender(), userCatergory, false);
         userDatabase.addUser(item);
     }
 
