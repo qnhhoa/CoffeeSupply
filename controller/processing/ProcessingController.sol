@@ -35,15 +35,9 @@ contract ProcessingController is
         return warehouseDatabase.getAllWarehouse();
     }
 
-<<<<<<< HEAD
-    function addIngress(string memory ingressAddress) public {
-        Ingress memory item = Ingress(ingressAddress, false);
-        return ingressDatabase.addIngress(item);x
-=======
     function addIngress(uint256 userId, uint256 farmerId, uint256 ingressDate, string memory ingressAddress) public {
         Ingress memory item = Ingress(0,userId, farmerId, ingressDate, ingressAddress, false);
         return ingressDatabase.addIngress(item);
->>>>>>> c044ad1ad2fc3839e7c837374aca2e107bf696dc
     }
 
     function getAllIngress() public view returns (Ingress[] memory) {
