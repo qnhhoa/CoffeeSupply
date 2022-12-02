@@ -16,6 +16,11 @@
 						"internalType": "address",
 						"name": "ingressDatabaseContractAddress",
 						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "roughDatabaseContractAddress",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -43,14 +48,14 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "userId",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "farmerId",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "farmerName",
+						"type": "string"
 					},
 					{
 						"internalType": "uint256",
@@ -64,6 +69,34 @@
 					}
 				],
 				"name": "addIngress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "batchId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "roughDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "roughAddress",
+						"type": "string"
+					}
+				],
+				"name": "addRough",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -100,14 +133,19 @@
 								"type": "uint256"
 							},
 							{
-								"internalType": "uint256",
-								"name": "userId",
-								"type": "uint256"
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
 							},
 							{
-								"internalType": "uint256",
-								"name": "farmerId",
-								"type": "uint256"
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerName",
+								"type": "string"
 							},
 							{
 								"internalType": "uint256",
@@ -126,6 +164,51 @@
 							}
 						],
 						"internalType": "struct Ingress[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllRough",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "roughDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "roughAdress",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "roughIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Rough[]",
 						"name": "",
 						"type": "tuple[]"
 					}
@@ -182,6 +265,19 @@
 				"outputs": [
 					{
 						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "roughDatabase",
+				"outputs": [
+					{
+						"internalType": "contract RoughDatabase",
 						"name": "",
 						"type": "address"
 					}
@@ -267,11 +363,11 @@
 			]
 		},
 		"controller/processing/ProcessingController.sol": {
-			"keccak256": "0xc9448be743f4b1fa459dc4ce4d06a3e3fc014ef79cee2fad3167710140098c1e",
+			"keccak256": "0xb0da28fe2bec1d62433c3d1c2f0b8f13f591d0f0abb3b3856a9ca61835614e32",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://21f231fb61478c569fa48e5898d2a502f7d577ce4caf01fb2f6688593e6cc8d6",
-				"dweb:/ipfs/QmaD5TpyDGezw9a1bgDrANX2vkXnkFAi1xne1pD3rw85tU"
+				"bzz-raw://00dc0caa070c6d6ebbc8d677401a0ad9d0cbec0336086eb23836966f30002786",
+				"dweb:/ipfs/Qmch5XChDEfpwBE6uavjSodkCRWBLhm3zSoKmwmWDSToye"
 			]
 		},
 		"cursor/processing/IngressDatabaseCursor.sol": {
@@ -280,6 +376,14 @@
 			"urls": [
 				"bzz-raw://7a078812a3fcd5ea39bda9d41ad0681b62700b53ee2b81404a5c55683e8ccb76",
 				"dweb:/ipfs/QmTgRmUkfVKTD7vci8jQsvxYL7UMsyLQ6RK7KmCgxqGUVf"
+			]
+		},
+		"cursor/processing/RoughDatabaseCursor.sol": {
+			"keccak256": "0x83e804da7783fa3f71e73a4b01ec1be454a84e1c7ed83ed5686f0accd208f0ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aea1912f078f36e8645f01b3e5a44198fdc8cb5f5ec618cba8c9c33aa532f97c",
+				"dweb:/ipfs/QmaDzTHABnqNNQCAouUhoz4wGsyjqRiqgxxedfW9BC9EhR"
 			]
 		},
 		"cursor/processing/WarehouseDatabaseCursor.sol": {
@@ -298,6 +402,14 @@
 				"dweb:/ipfs/QmZ2hgyPWPbeRyBAL1YDqX99hh6eZFMJgakWjPzsvvkAtf"
 			]
 		},
+		"database/processing/RoughDatabase.sol": {
+			"keccak256": "0x6bd11e59e388a1da4b3520dfe36813a3d0fbc57d39eeb14cb9d3ba50222c1126",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a2d49b8199608aecafcd6de2ad1b7c91d50c1caa6dffa64fbbb2ef59c5b45a00",
+				"dweb:/ipfs/QmedTg3TvKvzrLVuS6SHARQSF7uqEeAJJtHfZVmu9RZSeP"
+			]
+		},
 		"database/processing/WarehouseDatabase.sol": {
 			"keccak256": "0xac238056cc2a7393b758cf01b945088b57a1066806ab7250fbcdc21105930f06",
 			"license": "MIT",
@@ -307,11 +419,19 @@
 			]
 		},
 		"struct/processing/Ingress.sol": {
-			"keccak256": "0xcc9f8dae8e401e318fdcfab9ed098faf4f050a4fc029718b4642fa5afbbf2394",
+			"keccak256": "0x6272f07744ad4e7a826d48e9355c527bec658a40effd792eed88cd26c02dce9e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b11f034e119fc48c0f3eb0c7109b764da5a5f7f7670d222c0580453c0cd1606f",
-				"dweb:/ipfs/Qmc8TY4DWZRiYt87XhGabDt6wnEquMjMz614FWj3ZPVRdZ"
+				"bzz-raw://146a69fcffabe96d598ab2e23ff590a57639e0418a83cf0f6e60b2d30a16177e",
+				"dweb:/ipfs/QmZBMnjRhUz1BW6xqPm1Lym7M4rhY4H3Ax8EDFrYzhCLA5"
+			]
+		},
+		"struct/processing/Rough.sol": {
+			"keccak256": "0x7e68b7b07fce38eb433b8d245007950a8f719bb24b0672089c723d345de7ae3d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://644de7b92c8898fbc54e13eec9c14b701ce237c8a9bc870b187b95de38436afa",
+				"dweb:/ipfs/QmS5yzSrxwC4itA3KZx67NYEg4vY6upeffXH2vS7FTisac"
 			]
 		},
 		"struct/processing/Warehouse.sol": {

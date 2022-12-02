@@ -65,6 +65,11 @@
 								"type": "uint256"
 							},
 							{
+								"internalType": "string",
+								"name": "fullName",
+								"type": "string"
+							},
+							{
 								"internalType": "address",
 								"name": "userAddress",
 								"type": "address"
@@ -107,6 +112,11 @@
 								"internalType": "uint256",
 								"name": "userId",
 								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "fullName",
+								"type": "string"
 							},
 							{
 								"internalType": "address",
@@ -218,11 +228,11 @@
 			]
 		},
 		"struct/user/User.sol": {
-			"keccak256": "0x75449a9624c75edc323685a968ff9f2b1a75bee1c760f7d0581b4d063d8131e4",
+			"keccak256": "0x3f1112cfe137e116fea4d60393e12e5a84a0c7a846733636a6238960c9d9c13e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cde04dfe959c5dcb944b3f53413168b1cde51cbe2d0a2ffee2beceb74347d405",
-				"dweb:/ipfs/QmUEm2ntJ5CWRrvvxBK5z8S4GNA33Nxos3ZZ51RQsvxcAF"
+				"bzz-raw://25ede30abc05e52bf7381ff6f2b558e9b12339c54f0d0d1dd5dafe3e796023bf",
+				"dweb:/ipfs/QmQrr8o92XMewWGaYdC6SBUqEgMg27q2UanBq1XQjvdpMU"
 			]
 		}
 	},

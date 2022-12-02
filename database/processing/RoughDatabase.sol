@@ -27,12 +27,12 @@ contract RoughDatabase is Ownable {
         permissions[contractPermission] = true;
     }
 
-    function addRough(Rough memory Rough) public onlyPermissions {
-        list.push(Rough);
+    function addRough(Rough memory item) public onlyPermissions {
+        list.push(item);
     }
 
     function addChecked(uint256 RoughId) public onlyPermissions {
-        list[RoughId].RoughIsChecked = true;
+        list[RoughId].roughIsChecked = true;
     }
 
     function getAllRough()
