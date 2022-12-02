@@ -1,0 +1,250 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "RoughId",
+						"type": "uint256"
+					}
+				],
+				"name": "addChecked",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contractPermission",
+						"type": "address"
+					}
+				],
+				"name": "addPermission",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "roughDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "roughAdress",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "roughIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Rough",
+						"name": "item",
+						"type": "tuple"
+					}
+				],
+				"name": "addRough",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "destroy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllRough",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "roughDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "roughAdress",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "roughIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Rough[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"database/processing/RoughDatabase.sol": "RoughDatabase"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"abstract/Ownable.sol": {
+			"keccak256": "0x8e815c5f3f649aa4088098a200dbffbd403dbf38debbf06ee4a4d984d5a38df5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3488759a9fc298c4257a614f21d95ffc74d2f09928c57b5e50c0291a08a3bbd6",
+				"dweb:/ipfs/QmQijbEMGKt7R3L4fARqZTSD41Ah7dn5Lf6G3q9JWwEmgx"
+			]
+		},
+		"database/processing/RoughDatabase.sol": {
+			"keccak256": "0x6bd11e59e388a1da4b3520dfe36813a3d0fbc57d39eeb14cb9d3ba50222c1126",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a2d49b8199608aecafcd6de2ad1b7c91d50c1caa6dffa64fbbb2ef59c5b45a00",
+				"dweb:/ipfs/QmedTg3TvKvzrLVuS6SHARQSF7uqEeAJJtHfZVmu9RZSeP"
+			]
+		},
+		"struct/processing/Rough.sol": {
+			"keccak256": "0x7e68b7b07fce38eb433b8d245007950a8f719bb24b0672089c723d345de7ae3d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://644de7b92c8898fbc54e13eec9c14b701ce237c8a9bc870b187b95de38436afa",
+				"dweb:/ipfs/QmS5yzSrxwC4itA3KZx67NYEg4vY6upeffXH2vS7FTisac"
+			]
+		}
+	},
+	"version": 1
+}

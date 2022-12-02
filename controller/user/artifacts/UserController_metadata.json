@@ -38,6 +38,11 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "fullName",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
 						"name": "userCatergory",
 						"type": "uint256"
@@ -65,6 +70,11 @@
 								"internalType": "uint256",
 								"name": "userId",
 								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "fullName",
+								"type": "string"
 							},
 							{
 								"internalType": "address",
@@ -100,6 +110,11 @@
 								"internalType": "uint256",
 								"name": "userId",
 								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "fullName",
+								"type": "string"
 							},
 							{
 								"internalType": "address",
@@ -217,6 +232,7 @@
 		},
 		"controller/user/UserController.sol": {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"keccak256": "0x36c65d2be21e9e0b3ba9209b4d99835c7892ffb350aa53e800bebf76475535b2",
 			"license": "MIT",
 			"urls": [
@@ -229,14 +245,21 @@
 				"bzz-raw://5329b019e9befc9689468b7c6d0a9419d265c95ab87a791745cf6ef97aafa220",
 				"dweb:/ipfs/QmQJrKKfwdRrKDGPvAmqH6rUSTn97HRtVFycWNNZaKVFH7"
 >>>>>>> c044ad1ad2fc3839e7c837374aca2e107bf696dc
+=======
+			"keccak256": "0x2d5f73046f1616686182eb527e9e52d20ce293cf8845cbe7db50e7de62bae7c9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://662be697ae0b266eec32aa242c5e08002b76873a2f976f80146b25350d83378d",
+				"dweb:/ipfs/QmSL2ssM1Sagf69P7brwjgMcdRjQvXTJDeKdmrnHY4h4ZD"
+>>>>>>> 4091dd35c188a86b1ba4d3cd7153e38afb6f18cb
 			]
 		},
 		"cursor/user/UserDatabaseCursor.sol": {
-			"keccak256": "0xeefd9c2f0a14dfa01f574532327dedf15c6044fab38c330c63df538058a4553d",
+			"keccak256": "0x28f0cad5d769809952a878877b6b46bff16571d03a330fe024652eef5630ebba",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ea5711957977ec97918b5a23b2fd1e96555611652cf5af7e622e5d30f16fc023",
-				"dweb:/ipfs/Qmcx1zSK4aRkhZd3sNjdT78tPAJfMqDdUK4adwaGiXgTBR"
+				"bzz-raw://d7a185545251622f9854dea499c85db327b4026ba9ae54398a708c173383d7ea",
+				"dweb:/ipfs/QmYzAnuZaPq8tAqcAMG6ym5Ncpf5v6baCC9iPPzFRUaLrZ"
 			]
 		},
 		"database/user/UserDatabase.sol": {
@@ -248,11 +271,11 @@
 			]
 		},
 		"struct/user/User.sol": {
-			"keccak256": "0x75449a9624c75edc323685a968ff9f2b1a75bee1c760f7d0581b4d063d8131e4",
+			"keccak256": "0x3f1112cfe137e116fea4d60393e12e5a84a0c7a846733636a6238960c9d9c13e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cde04dfe959c5dcb944b3f53413168b1cde51cbe2d0a2ffee2beceb74347d405",
-				"dweb:/ipfs/QmUEm2ntJ5CWRrvvxBK5z8S4GNA33Nxos3ZZ51RQsvxcAF"
+				"bzz-raw://25ede30abc05e52bf7381ff6f2b558e9b12339c54f0d0d1dd5dafe3e796023bf",
+				"dweb:/ipfs/QmQrr8o92XMewWGaYdC6SBUqEgMg27q2UanBq1XQjvdpMU"
 			]
 		}
 	},

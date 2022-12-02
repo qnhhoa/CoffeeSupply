@@ -52,14 +52,19 @@
 								"type": "uint256"
 							},
 							{
-								"internalType": "uint256",
-								"name": "userId",
-								"type": "uint256"
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
 							},
 							{
-								"internalType": "uint256",
-								"name": "farmerId",
-								"type": "uint256"
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerName",
+								"type": "string"
 							},
 							{
 								"internalType": "uint256",
@@ -119,14 +124,19 @@
 								"type": "uint256"
 							},
 							{
-								"internalType": "uint256",
-								"name": "userId",
-								"type": "uint256"
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
 							},
 							{
-								"internalType": "uint256",
-								"name": "farmerId",
-								"type": "uint256"
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerName",
+								"type": "string"
 							},
 							{
 								"internalType": "uint256",
@@ -238,11 +248,11 @@
 			]
 		},
 		"struct/processing/Ingress.sol": {
-			"keccak256": "0xcc9f8dae8e401e318fdcfab9ed098faf4f050a4fc029718b4642fa5afbbf2394",
+			"keccak256": "0x6272f07744ad4e7a826d48e9355c527bec658a40effd792eed88cd26c02dce9e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b11f034e119fc48c0f3eb0c7109b764da5a5f7f7670d222c0580453c0cd1606f",
-				"dweb:/ipfs/Qmc8TY4DWZRiYt87XhGabDt6wnEquMjMz614FWj3ZPVRdZ"
+				"bzz-raw://146a69fcffabe96d598ab2e23ff590a57639e0418a83cf0f6e60b2d30a16177e",
+				"dweb:/ipfs/QmZBMnjRhUz1BW6xqPm1Lym7M4rhY4H3Ax8EDFrYzhCLA5"
 			]
 		}
 	},

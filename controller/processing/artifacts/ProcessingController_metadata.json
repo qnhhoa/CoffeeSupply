@@ -16,6 +16,11 @@
 						"internalType": "address",
 						"name": "ingressDatabaseContractAddress",
 						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "roughDatabaseContractAddress",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -64,6 +69,34 @@
 					}
 				],
 				"name": "addIngress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "batchId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "roughDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "roughAddress",
+						"type": "string"
+					}
+				],
+				"name": "addRough",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -140,6 +173,51 @@
 			},
 			{
 				"inputs": [],
+				"name": "getAllRough",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "roughDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "roughAdress",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "roughIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Rough[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getAllWarehouse",
 				"outputs": [
 					{
@@ -187,6 +265,19 @@
 				"outputs": [
 					{
 						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "roughDatabase",
+				"outputs": [
+					{
+						"internalType": "contract RoughDatabase",
 						"name": "",
 						"type": "address"
 					}
@@ -272,11 +363,19 @@
 			]
 		},
 		"controller/processing/ProcessingController.sol": {
+<<<<<<< HEAD
 			"keccak256": "0x2961bad402429ede9074b6944b28f767998c0880b1417243a16a0eb58780e4aa",
 			"license": "MIT",
 			"urls": [
 				"bzz-raw://f20aa2ca1e798c12581a2c345b21db62a4562256ee8226573a8c8d8a11f26c98",
 				"dweb:/ipfs/QmapNDAFcbDfRUQBPsRMTwPXdDrHvTdGQ3nJZTNF6AwTcx"
+=======
+			"keccak256": "0xb0da28fe2bec1d62433c3d1c2f0b8f13f591d0f0abb3b3856a9ca61835614e32",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://00dc0caa070c6d6ebbc8d677401a0ad9d0cbec0336086eb23836966f30002786",
+				"dweb:/ipfs/Qmch5XChDEfpwBE6uavjSodkCRWBLhm3zSoKmwmWDSToye"
+>>>>>>> 4091dd35c188a86b1ba4d3cd7153e38afb6f18cb
 			]
 		},
 		"cursor/processing/IngressDatabaseCursor.sol": {
@@ -285,6 +384,14 @@
 			"urls": [
 				"bzz-raw://7a078812a3fcd5ea39bda9d41ad0681b62700b53ee2b81404a5c55683e8ccb76",
 				"dweb:/ipfs/QmTgRmUkfVKTD7vci8jQsvxYL7UMsyLQ6RK7KmCgxqGUVf"
+			]
+		},
+		"cursor/processing/RoughDatabaseCursor.sol": {
+			"keccak256": "0x83e804da7783fa3f71e73a4b01ec1be454a84e1c7ed83ed5686f0accd208f0ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aea1912f078f36e8645f01b3e5a44198fdc8cb5f5ec618cba8c9c33aa532f97c",
+				"dweb:/ipfs/QmaDzTHABnqNNQCAouUhoz4wGsyjqRiqgxxedfW9BC9EhR"
 			]
 		},
 		"cursor/processing/WarehouseDatabaseCursor.sol": {
@@ -303,6 +410,14 @@
 				"dweb:/ipfs/QmZ2hgyPWPbeRyBAL1YDqX99hh6eZFMJgakWjPzsvvkAtf"
 			]
 		},
+		"database/processing/RoughDatabase.sol": {
+			"keccak256": "0x6bd11e59e388a1da4b3520dfe36813a3d0fbc57d39eeb14cb9d3ba50222c1126",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a2d49b8199608aecafcd6de2ad1b7c91d50c1caa6dffa64fbbb2ef59c5b45a00",
+				"dweb:/ipfs/QmedTg3TvKvzrLVuS6SHARQSF7uqEeAJJtHfZVmu9RZSeP"
+			]
+		},
 		"database/processing/WarehouseDatabase.sol": {
 			"keccak256": "0xac238056cc2a7393b758cf01b945088b57a1066806ab7250fbcdc21105930f06",
 			"license": "MIT",
@@ -317,6 +432,17 @@
 			"urls": [
 				"bzz-raw://146a69fcffabe96d598ab2e23ff590a57639e0418a83cf0f6e60b2d30a16177e",
 				"dweb:/ipfs/QmZBMnjRhUz1BW6xqPm1Lym7M4rhY4H3Ax8EDFrYzhCLA5"
+<<<<<<< HEAD
+=======
+			]
+		},
+		"struct/processing/Rough.sol": {
+			"keccak256": "0x7e68b7b07fce38eb433b8d245007950a8f719bb24b0672089c723d345de7ae3d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://644de7b92c8898fbc54e13eec9c14b701ce237c8a9bc870b187b95de38436afa",
+				"dweb:/ipfs/QmS5yzSrxwC4itA3KZx67NYEg4vY6upeffXH2vS7FTisac"
+>>>>>>> 4091dd35c188a86b1ba4d3cd7153e38afb6f18cb
 			]
 		},
 		"struct/processing/Warehouse.sol": {

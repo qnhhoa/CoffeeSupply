@@ -10,4 +10,20 @@ abstract contract UserDatabaseCursor {
     constructor(address value) {
         userDatabase = UserDatabase(value);
     }
+
+    modifier onlyNotExistUser() {
+        require(
+            !checkExistUser(),
+            "UserDatabaseCursor: 300:  only not exist user"
+        );
+        _;
+    }
+
+    function checkExistUser() public view returns (bool) {
+        User[] memory list = userDatabase.getAllUser();
+        for (uint256 i = 0; i < list.length; i++) {
+            if (list[i].userAddress == msg.sender) return true;
+        }
+        return false;
+    }
 }
