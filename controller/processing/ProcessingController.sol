@@ -39,7 +39,8 @@ contract ProcessingController is
         string memory userName,
         string memory farmerName,
         uint256 ingressDate,
-        string memory ingressAddress
+        string memory ingressAddress,
+        string memory contractPhoto
     ) public {
         Ingress memory item = Ingress(
             0,
@@ -48,6 +49,7 @@ contract ProcessingController is
             farmerName,
             ingressDate,
             ingressAddress,
+            contractPhoto,
             false
         );
         return ingressDatabase.addIngress(item);
