@@ -5,7 +5,7 @@ struct Package {
     uint256 batchId;
     string userName;
     address userAddress;
-    uint256 packageDate;
+    string packageDate;
     string packageAddress;
     bool packageIsChecked;
 }

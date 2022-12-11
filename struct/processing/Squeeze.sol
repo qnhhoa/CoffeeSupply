@@ -5,7 +5,7 @@ struct Squeeze {
     uint256 batchId;
     string userName;
     address userAddress;
-    uint256 squeezeDate;
+    string squeezeDate;
     string squeezeAddress;
     bool squezeIsChecked;
 }
