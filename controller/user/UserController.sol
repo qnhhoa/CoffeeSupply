@@ -27,7 +27,7 @@ contract UserController is Ownable, UserDatabaseCursor {
         userDatabase.addUser(item);
     }
 
-    function getAllUser() public view onlyOwner returns (User[] memory) {
+   function getAllUser() public view onlyOwner returns (User[] memory) {
         return userDatabase.getAllUser();
     }
 }
