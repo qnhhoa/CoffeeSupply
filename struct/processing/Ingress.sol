@@ -6,7 +6,8 @@ struct Ingress {
     string userName;
     address userAddress;
     string farmerName;
-    uint256 ingressDate;
+    string ingressDate;
     string ingressAddress;
+    string contractPhoto;
     bool ingressIsChecked;
 }
