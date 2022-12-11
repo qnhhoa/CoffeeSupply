@@ -19,11 +19,11 @@ contract UserController is Ownable, UserDatabaseCursor {
         return User(0, "",0,"", address(0), 0, false);
     }
 
-    function addUser(string memory fullName,uint256 userCccd, string userEmail, uint256 userCatergory)
+    function addUser(string memory fullName,uint256 userCccd, string userEmail, uint256 userCategory)
         public
         onlyNotExistUser
     {
-        User memory item = User(0, fullName,userCccd,userEmail,_msgSender(), userCatergory, true);
+        User memory item = User(0, fullName,userCccd,userEmail,_msgSender(), userCategory, true);
         userDatabase.addUser(item);
     }
 

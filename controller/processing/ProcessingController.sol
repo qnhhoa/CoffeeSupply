@@ -38,7 +38,7 @@ contract ProcessingController is
     function addIngress(
         string memory userName,
         string memory farmerName,
-        uint256 ingressDate,
+        string memory ingressDate,
         string memory ingressAddress,
         string memory contractPhoto
     ) public {
@@ -62,7 +62,7 @@ contract ProcessingController is
     function addRough(
         uint256 batchId,
         string memory userName,
-        uint256 roughDate,
+        string memory roughDate,
         string memory roughAddress
     ) public {
         Rough memory item = Rough(
