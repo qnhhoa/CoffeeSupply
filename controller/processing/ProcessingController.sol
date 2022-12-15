@@ -37,7 +37,7 @@ contract ProcessingController is
 
     function addIngress(
         string memory userName,
-        string memory farmerName,
+        uint256 farmerCccd,
         string memory ingressDate,
         string memory ingressAddress,
         string memory contractPhoto
@@ -46,7 +46,7 @@ contract ProcessingController is
             0,
             userName,
             _msgSender(),
-            farmerName,
+            farmerCccd,
             ingressDate,
             ingressAddress,
             contractPhoto,
@@ -63,7 +63,8 @@ contract ProcessingController is
         uint256 batchId,
         string memory userName,
         string memory roughDate,
-        string memory roughAddress
+        string memory roughAddress,
+        string memory processPhoto
     ) public {
         Rough memory item = Rough(
             batchId,
@@ -71,6 +72,7 @@ contract ProcessingController is
             _msgSender(),
             roughDate,
             roughAddress,
+            processPhoto,
             false
         );
         return roughDatabase.addRough(item);

@@ -7,5 +7,6 @@ struct Rough {
     address userAddress;
     string roughDate;
     string roughAdress;
+    string processPhoto;
     bool roughIsChecked;
 }

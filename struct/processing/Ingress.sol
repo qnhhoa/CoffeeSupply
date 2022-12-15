@@ -5,7 +5,7 @@ struct Ingress {
     uint256 batchId;
     string userName;
     address userAddress;
-    string farmerName;
+    uint256 farmerCccd;
     string ingressDate;
     string ingressAddress;
     string contractPhoto;
