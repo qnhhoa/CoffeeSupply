@@ -4,7 +4,7 @@ pragma solidity >=0.8.12 <0.9.0;
 struct User{
     uint256 userId;
     string fullName;
-    uint256 userCccd;
+    string userCccd;
     string userEmail;
     address userAddress;
     uint256 userCategory;
