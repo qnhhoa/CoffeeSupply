@@ -38,6 +38,21 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "farmerCccd",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "farmerName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "farmerEmail",
+						"type": "string"
+					},
+					{
 						"internalType": "string",
 						"name": "farmerAddress",
 						"type": "string"
@@ -78,6 +93,21 @@
 								"internalType": "uint256",
 								"name": "farmerId",
 								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "farmerCccd",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerEmail",
+								"type": "string"
 							},
 							{
 								"internalType": "string",
@@ -176,11 +206,11 @@
 			]
 		},
 		"controller/farmer/FarmerController.sol": {
-			"keccak256": "0x1973524da2f21a5c881aff5177663a1d76043ad4b40cc97a8eb5fc8587370656",
+			"keccak256": "0xddb88310e5be415167d61d2f6c0291fd3b6f21eba48343b241c4c38d1b0987b4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dacae4fadf51abc9cf3455fc5d84d76daa27227d529c619673931bd2c3d6095a",
-				"dweb:/ipfs/QmVswDK4Rssoc1gioFH7yqiCFxN92wED5FehiXacLwVJAu"
+				"bzz-raw://ca90795f104fe89341ba01c6cfe43f4aef09db8a5f4afb75d293214186263d97",
+				"dweb:/ipfs/QmR1Poa2XZTS7ZeLTzbTzBW1tQsCcA5vAhTLFaLQRFte17"
 			]
 		},
 		"cursor/Farmer/FarmerDatabaseCursor.sol": {
@@ -200,11 +230,11 @@
 			]
 		},
 		"struct/farmer/Farmer.sol": {
-			"keccak256": "0xde237866922ae84685b5a9534723524eff6970da16702eb8d9c0453563b4a5bf",
+			"keccak256": "0xca6d5159dbca538dea7a02d00a05936d75bb4585d850fdef2522ae8df5cada11",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://70025e534d190711dc1ff386ca76b29b1c2e0085487f50265e322098682941b2",
-				"dweb:/ipfs/QmYqe3KQoVfkaiQPPCHcTBJwskQEjm9RvYWrUSD6SJBqsf"
+				"bzz-raw://953b5e49f49fa293c9e5ed1762878b9a6fb7088a402f7259b802d9225ad53600",
+				"dweb:/ipfs/QmXHVhy7Y6bMNK1aWKDNnmVMU8cC6yQvmaKGvJT4oEXdk6"
 			]
 		}
 	},
