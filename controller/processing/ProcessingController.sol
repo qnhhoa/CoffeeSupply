@@ -40,7 +40,8 @@ contract ProcessingController is
         uint256 farmerCccd,
         string memory ingressDate,
         string memory ingressAddress,
-        string memory contractPhoto
+        string memory contractPhoto,
+        uint256 keyValue
     ) public {
         Ingress memory item = Ingress(
             0,
@@ -50,6 +51,7 @@ contract ProcessingController is
             ingressDate,
             ingressAddress,
             contractPhoto,
+            keyValue,
             false
         );
         return ingressDatabase.addIngress(item);
@@ -64,7 +66,8 @@ contract ProcessingController is
         string memory userName,
         string memory roughDate,
         string memory roughAddress,
-        string memory processPhoto
+        string memory processPhoto,
+        uint256 keyValue
     ) public {
         Rough memory item = Rough(
             batchId,
@@ -73,6 +76,7 @@ contract ProcessingController is
             roughDate,
             roughAddress,
             processPhoto,
+            keyValue,
             false
         );
         return roughDatabase.addRough(item);

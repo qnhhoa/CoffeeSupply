@@ -9,5 +9,6 @@ struct Ingress {
     string ingressDate;
     string ingressAddress;
     string contractPhoto;
+    uint256 keyValue;
     bool ingressIsChecked;
 }

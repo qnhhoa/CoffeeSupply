@@ -11,7 +11,7 @@ contract FarmerController is Ownable, FarmerDatabaseCursor {
         FarmerDatabaseCursor(FarmerDatabaseContractAddress)
     {}
 
-    function addFarmer(uint256 farmerCccd,string farmerName, string farmerEmail, string memory farmerAddress) public {
+    function addFarmer(uint256 farmerCccd,string memory farmerName, string memory farmerEmail, string memory farmerAddress) public {
         Farmer memory item = Farmer(0, farmerCccd, farmerName, farmerEmail, farmerAddress, false);
         return farmerDatabase.addFarmer(item);
     }
