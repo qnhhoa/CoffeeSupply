@@ -8,5 +8,6 @@ struct Rough {
     string roughDate;
     string roughAdress;
     string processPhoto;
+    uint256 keyValue;
     bool roughIsChecked;
 }
