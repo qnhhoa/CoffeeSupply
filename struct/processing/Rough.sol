@@ -6,7 +6,7 @@ struct Rough {
     string userName;
     address userAddress;
     string roughDate;
-    string roughAdress;
+    string warehouseAdress;
     string processPhoto;
     uint256 keyValue;
     bool roughIsChecked;
