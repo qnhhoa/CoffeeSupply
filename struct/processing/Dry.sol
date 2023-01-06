@@ -6,6 +6,8 @@ struct Dry {
     string userName;
     address userAddress;
     string dryDate;
-    string dryAddress;
+    string warehouseAddress;
+    string processPhoto;
+    uint256 keyValue;
     bool dryIsChecked;
 }

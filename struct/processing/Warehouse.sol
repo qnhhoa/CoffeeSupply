@@ -3,6 +3,7 @@ pragma solidity >=0.8.12;
 
 struct Warehouse {
     uint256 warehouseId;
-    string warehoustAddress;
+    string warehouseName;
+    string warehouseAddress;
     bool warehouseIsChecked;
 }
