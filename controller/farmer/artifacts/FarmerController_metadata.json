@@ -206,11 +206,11 @@
 			]
 		},
 		"controller/farmer/FarmerController.sol": {
-			"keccak256": "0xddb88310e5be415167d61d2f6c0291fd3b6f21eba48343b241c4c38d1b0987b4",
+			"keccak256": "0x2286ffe04cc775809a57de3ee973a78da7f5c0b17e9462589d81cf8759062dc1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ca90795f104fe89341ba01c6cfe43f4aef09db8a5f4afb75d293214186263d97",
-				"dweb:/ipfs/QmR1Poa2XZTS7ZeLTzbTzBW1tQsCcA5vAhTLFaLQRFte17"
+				"bzz-raw://59d3a395998d377cb41b07b07a36953fc80ae1492ed7b8cf4396ddf61e48905f",
+				"dweb:/ipfs/Qmf58QGdFmRarV1RzBb4d1HJdFS8bp9chrbn5YNuHohob9"
 			]
 		},
 		"cursor/Farmer/FarmerDatabaseCursor.sol": {
