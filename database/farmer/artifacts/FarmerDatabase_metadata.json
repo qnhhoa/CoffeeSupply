@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -50,6 +50,21 @@
 								"internalType": "uint256",
 								"name": "farmerId",
 								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "farmerCccd",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerEmail",
+								"type": "string"
 							},
 							{
 								"internalType": "string",
@@ -102,6 +117,21 @@
 								"internalType": "uint256",
 								"name": "farmerId",
 								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "farmerCccd",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "farmerEmail",
+								"type": "string"
 							},
 							{
 								"internalType": "string",
@@ -171,7 +201,7 @@
 		"compilationTarget": {
 			"database/farmer/FarmerDatabase.sol": "FarmerDatabase"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -192,27 +222,27 @@
 			]
 		},
 		"abstract/Ownable.sol": {
-			"keccak256": "0x7762efc174525382418f93512374b92e81602f4aba3c6f0cff8d8c46c46fd91c",
+			"keccak256": "0x8e815c5f3f649aa4088098a200dbffbd403dbf38debbf06ee4a4d984d5a38df5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://502ac1474c536c239c2cd669833cf6eef40c57f2b6ff7bc4ce78882d8cc4db20",
-				"dweb:/ipfs/QmWpcgXb1RAX7rGKfbSn1cuDhA5ToMaogDYFEFyJq5EvGF"
+				"bzz-raw://3488759a9fc298c4257a614f21d95ffc74d2f09928c57b5e50c0291a08a3bbd6",
+				"dweb:/ipfs/QmQijbEMGKt7R3L4fARqZTSD41Ah7dn5Lf6G3q9JWwEmgx"
 			]
 		},
 		"database/farmer/FarmerDatabase.sol": {
-			"keccak256": "0xe9faacf7814e386c8f93956a39643cf0dce82153188a9cfb631c478c6814c030",
+			"keccak256": "0xca8667a1fba9bed5614f95183312c1b44c42ce343b0859f91f1b06145f4c5cf6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cbf78fa3c603268ac25681c4bec57cd1d6020499a85bb57afdac5caa9732f4b1",
-				"dweb:/ipfs/QmZ5kmCUeiji5y3KX8swEKNxif2mKKJWggSoHqXa5V4x7F"
+				"bzz-raw://b68feb2f6278ca5fbdc0949096e43e44cebf08bb4bed4b062611688623517620",
+				"dweb:/ipfs/QmX7fZjUf1suxQzvNaeU9CW7Kf4q9ESMyEiG8v5C312yar"
 			]
 		},
 		"struct/farmer/Farmer.sol": {
-			"keccak256": "0xde0224fdef06e4b0e31eca9829604b2b995724662e03d5e753ada37055faa7b9",
+			"keccak256": "0xca6d5159dbca538dea7a02d00a05936d75bb4585d850fdef2522ae8df5cada11",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bd69ad4256b6d91f0d16b8339f57891e39cedf6a4f018e8e7acbed120a7f93e2",
-				"dweb:/ipfs/QmdhFrgq5g84JE7RFLiSgLkeKD2hqf56ovzPSuTQbvEUJF"
+				"bzz-raw://953b5e49f49fa293c9e5ed1762878b9a6fb7088a402f7259b802d9225ad53600",
+				"dweb:/ipfs/QmXHVhy7Y6bMNK1aWKDNnmVMU8cC6yQvmaKGvJT4oEXdk6"
 			]
 		}
 	},
