@@ -1,0 +1,250 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "batchId",
+						"type": "uint256"
+					}
+				],
+				"name": "addChecked",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "batchName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "manuDate",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "expDate",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "expIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Expiration",
+						"name": "item",
+						"type": "tuple"
+					}
+				],
+				"name": "addExpiration",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contractPermission",
+						"type": "address"
+					}
+				],
+				"name": "addPermission",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "destroy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllExpiration",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "batchName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "manuDate",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "expDate",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "expIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Expiration[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"database/management/ExpDatabase.sol": "ExpDatabase"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"abstract/Ownable.sol": {
+			"keccak256": "0x8e815c5f3f649aa4088098a200dbffbd403dbf38debbf06ee4a4d984d5a38df5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3488759a9fc298c4257a614f21d95ffc74d2f09928c57b5e50c0291a08a3bbd6",
+				"dweb:/ipfs/QmQijbEMGKt7R3L4fARqZTSD41Ah7dn5Lf6G3q9JWwEmgx"
+			]
+		},
+		"database/management/ExpDatabase.sol": {
+			"keccak256": "0x723c08059f3c901633f932449000806f6bf3d5093eca728874a52f3c4a55d16c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e2058f4721d0594d22208f7eeeb56db30a38df794a3e2f98612dc7e8d3e86d0",
+				"dweb:/ipfs/Qmexi1TmSQy3YDhfckoLA8iGYgLAXXyjFt8fENs26Gg6J3"
+			]
+		},
+		"struct/management/expire.sol": {
+			"keccak256": "0x1b3d32dda3dedbc852bba16a41e8bb08864f2f6753ee1a51cab02b227c50c981",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6fa7ca9afad1eafaaea3effda4f734f2f43d8feb98e3849a7814f87320f7f23f",
+				"dweb:/ipfs/QmQNqGCG8UDLQRhV1mvpDuHkf7HFuiMBvBzGRjhkYRt28B"
+			]
+		}
+	},
+	"version": 1
+}

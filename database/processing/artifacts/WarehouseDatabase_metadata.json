@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -66,7 +66,12 @@
 							},
 							{
 								"internalType": "string",
-								"name": "warehoustAddress",
+								"name": "warehouseName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "warehouseAddress",
 								"type": "string"
 							},
 							{
@@ -105,7 +110,12 @@
 							},
 							{
 								"internalType": "string",
-								"name": "warehoustAddress",
+								"name": "warehouseName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "warehouseAddress",
 								"type": "string"
 							},
 							{
@@ -171,7 +181,7 @@
 		"compilationTarget": {
 			"database/processing/WarehouseDatabase.sol": "WarehouseDatabase"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -208,11 +218,11 @@
 			]
 		},
 		"struct/processing/Warehouse.sol": {
-			"keccak256": "0x52cc631908f5d0b7c1bb257f86051959f7b2d0fe9e1335dc392cb90e0b3f4043",
+			"keccak256": "0x01bdb70a718addd2a1456eba7af75cc9c718db3beb4b01c2af4fcf80fa4fa131",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2a3f11a4055d7a9c2578cbf0746bb27069f567a1c0eb64cbe07ec3f404a2b850",
-				"dweb:/ipfs/QmbKnQHq7N6aUdEsat3M6FcafwupPjuKCfDybsr7B15kt1"
+				"bzz-raw://040ce1c49d2db73e5baa70251e08397fe4dc784414f20b4232afa6c2fc421d99",
+				"dweb:/ipfs/QmeMSMZpQxhWWuqwSZkixSPcfTEp4sayzN9Kqupk8osZ5S"
 			]
 		}
 	},

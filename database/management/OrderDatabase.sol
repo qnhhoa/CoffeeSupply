@@ -6,6 +6,7 @@ import {Order} from "../../struct/management/order.sol";
 
 contract OrderDatabase is Ownable {
     Order[] private list;
+    uint256 private autoIncrement = 0;
 
     mapping(address => bool) private permissions;
 
@@ -27,12 +28,14 @@ contract OrderDatabase is Ownable {
         permissions[contractPermission] = true;
     }
 
-    function addOrder(Order memory item) public onlyPermissions {
-        list.push(item);
+    function addOrder(Order memory order) public onlyPermissions {
+        uint256 id = autoIncrement++;
+        order.batchId = id;
+        list.push(order);
     }
 
-    function addChecked(uint256 OrderId) public onlyPermissions {
-        list[OrderId].orderIsChecked = true;
+    function addChecked(uint256 orderId) public onlyPermissions {
+        list[orderId].orderIsChecked = true;
     }
 
     function getAllOrder()

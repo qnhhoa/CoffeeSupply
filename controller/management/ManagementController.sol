@@ -2,8 +2,8 @@
 pragma solidity >=0.8.14 <0.9.0;
 
 import {Ownable} from "../../abstract/Ownable.sol";
-import {OrderDatabaseCursor} from "../../cursor/processing/DryDatabaseCursor.sol";
-import {ExpDatabaseCursor} from "../../cursor/processing/PackageDatabaseCursor.sol";
+import {OrderDatabaseCursor} from "../../cursor/management/OrderDatabaseCursor.sol";
+import {ExpDatabaseCursor} from "../../cursor/management/ExpDatabaseCursor.sol";
 import {Expiration} from "../../struct/management/expire.sol";
 import {Order} from "../../struct/management/order.sol";
 
@@ -33,12 +33,13 @@ contract ManagementController is
         uint256 keyValue
     ) public {
         Order memory item = Order(
+            0,
             batchId,
             batchName,
             userName,
             _msgSender(),
             deliveryDate,
-            prives,
+            prices,
             status,
             orderAddress,
             phoneNumber,

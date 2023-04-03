@@ -1,0 +1,270 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "SquashId",
+						"type": "uint256"
+					}
+				],
+				"name": "addChecked",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "contractPermission",
+						"type": "address"
+					}
+				],
+				"name": "addPermission",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "squashDate",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "warehouseAddress",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "processPhoto",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "squashIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Squash",
+						"name": "item",
+						"type": "tuple"
+					}
+				],
+				"name": "addSquash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "destroy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllSquash",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "squashDate",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "warehouseAddress",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "processPhoto",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "squashIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Squash[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"database/processing/SquashDatabase.sol": "SquashDatabase"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"abstract/Ownable.sol": {
+			"keccak256": "0x8e815c5f3f649aa4088098a200dbffbd403dbf38debbf06ee4a4d984d5a38df5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3488759a9fc298c4257a614f21d95ffc74d2f09928c57b5e50c0291a08a3bbd6",
+				"dweb:/ipfs/QmQijbEMGKt7R3L4fARqZTSD41Ah7dn5Lf6G3q9JWwEmgx"
+			]
+		},
+		"database/processing/SquashDatabase.sol": {
+			"keccak256": "0x08d761e236f3371011f6cf77a72ea22b63fa89ba4a73dbd0be3cabc61d793676",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0a7c20390a3e90a0340effa6b10c3b318e6431f6e9baca725b086047f3a1856e",
+				"dweb:/ipfs/QmZctPjfRAKmM2PzxL9oE49v6AzELwVjJNeFWpfMWpAFEq"
+			]
+		},
+		"struct/processing/Squash.sol": {
+			"keccak256": "0x95af66b46e6b7bb757d0f7222508d485b807056327df2a85e0428f59dc234505",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://69bde2f4037cc2b940bc81da5de123b54cb4fd439c23b024d5e2be3f552fa8ad",
+				"dweb:/ipfs/QmTFbczJH7WQnZdE3cesr9mRWjvmEpsXMK2B887ajtez5W"
+			]
+		}
+	},
+	"version": 1
+}

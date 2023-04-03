@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -75,14 +75,24 @@
 								"type": "address"
 							},
 							{
-								"internalType": "uint256",
+								"internalType": "string",
 								"name": "roughDate",
-								"type": "uint256"
+								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "roughAdress",
+								"name": "warehouseAdress",
 								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "processPhoto",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
 							},
 							{
 								"internalType": "bool",
@@ -129,14 +139,24 @@
 								"type": "address"
 							},
 							{
-								"internalType": "uint256",
+								"internalType": "string",
 								"name": "roughDate",
-								"type": "uint256"
+								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "roughAdress",
+								"name": "warehouseAdress",
 								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "processPhoto",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
 							},
 							{
 								"internalType": "bool",
@@ -201,7 +221,7 @@
 		"compilationTarget": {
 			"database/processing/RoughDatabase.sol": "RoughDatabase"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -238,11 +258,11 @@
 			]
 		},
 		"struct/processing/Rough.sol": {
-			"keccak256": "0x7e68b7b07fce38eb433b8d245007950a8f719bb24b0672089c723d345de7ae3d",
+			"keccak256": "0x60cb788dc773cd9227fe550a9e33097ecff62e33c4e668971452eecb3f817ef3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://644de7b92c8898fbc54e13eec9c14b701ce237c8a9bc870b187b95de38436afa",
-				"dweb:/ipfs/QmS5yzSrxwC4itA3KZx67NYEg4vY6upeffXH2vS7FTisac"
+				"bzz-raw://ab59df2807f0951b7da3a55adf1b94b05ca77d7f50d6aac505b9fd42ddd12cf0",
+				"dweb:/ipfs/QmVWR1v16nM7titUb7JznVeE1Dq6CtPEJrLmncZ22ojPwx"
 			]
 		}
 	},

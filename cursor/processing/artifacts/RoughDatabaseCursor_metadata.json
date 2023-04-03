@@ -1,0 +1,91 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "roughDatabase",
+				"outputs": [
+					{
+						"internalType": "contract RoughDatabase",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"cursor/processing/RoughDatabaseCursor.sol": "RoughDatabaseCursor"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"abstract/Ownable.sol": {
+			"keccak256": "0x8e815c5f3f649aa4088098a200dbffbd403dbf38debbf06ee4a4d984d5a38df5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3488759a9fc298c4257a614f21d95ffc74d2f09928c57b5e50c0291a08a3bbd6",
+				"dweb:/ipfs/QmQijbEMGKt7R3L4fARqZTSD41Ah7dn5Lf6G3q9JWwEmgx"
+			]
+		},
+		"cursor/processing/RoughDatabaseCursor.sol": {
+			"keccak256": "0x83e804da7783fa3f71e73a4b01ec1be454a84e1c7ed83ed5686f0accd208f0ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aea1912f078f36e8645f01b3e5a44198fdc8cb5f5ec618cba8c9c33aa532f97c",
+				"dweb:/ipfs/QmaDzTHABnqNNQCAouUhoz4wGsyjqRiqgxxedfW9BC9EhR"
+			]
+		},
+		"database/processing/RoughDatabase.sol": {
+			"keccak256": "0x6bd11e59e388a1da4b3520dfe36813a3d0fbc57d39eeb14cb9d3ba50222c1126",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a2d49b8199608aecafcd6de2ad1b7c91d50c1caa6dffa64fbbb2ef59c5b45a00",
+				"dweb:/ipfs/QmedTg3TvKvzrLVuS6SHARQSF7uqEeAJJtHfZVmu9RZSeP"
+			]
+		},
+		"struct/processing/Rough.sol": {
+			"keccak256": "0x60cb788dc773cd9227fe550a9e33097ecff62e33c4e668971452eecb3f817ef3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ab59df2807f0951b7da3a55adf1b94b05ca77d7f50d6aac505b9fd42ddd12cf0",
+				"dweb:/ipfs/QmVWR1v16nM7titUb7JznVeE1Dq6CtPEJrLmncZ22ojPwx"
+			]
+		}
+	},
+	"version": 1
+}

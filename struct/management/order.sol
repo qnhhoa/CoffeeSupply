@@ -2,6 +2,7 @@
 pragma solidity >=0.8.12 <0.9.0;
 
 struct Order {
+    uint256 orderId;
     uint256 batchId;
     string batchName;
     string userName;

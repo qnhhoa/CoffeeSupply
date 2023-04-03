@@ -2,7 +2,7 @@
 pragma solidity >=0.8.12 <0.9.0;
 
 import {Ownable} from "../../abstract/Ownable.sol";
-import {Expiration} from "../../struct/management/Expire.sol";
+import {Expiration} from "../../struct/management/expire.sol";
 
 contract ExpDatabase is Ownable {
     Expiration[] private list;
@@ -31,8 +31,8 @@ contract ExpDatabase is Ownable {
         list.push(item);
     }
 
-    function addChecked(uint256 ExpirationId) public onlyPermissions {
-        list[ExpirationId].expIsChecked = true;
+    function addChecked(uint256 batchId) public onlyPermissions {
+        list[batchId].expIsChecked = true;
     }
 
     function getAllExpiration()

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -20,6 +20,21 @@
 					{
 						"internalType": "address",
 						"name": "roughDatabaseContractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "squashDatabaseContractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "dryDatabaseContractAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "packageDatabaseContractAddress",
 						"type": "address"
 					}
 				],
@@ -48,24 +63,72 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "batchId",
+						"type": "uint256"
+					},
+					{
 						"internalType": "string",
 						"name": "userName",
 						"type": "string"
 					},
 					{
 						"internalType": "string",
-						"name": "farmerName",
+						"name": "dryDate",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "warehouseAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "processPhoto",
 						"type": "string"
 					},
 					{
 						"internalType": "uint256",
-						"name": "ingressDate",
+						"name": "keyValue",
 						"type": "uint256"
+					}
+				],
+				"name": "addDry",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "farmerCccd",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "ingressDate",
+						"type": "string"
 					},
 					{
 						"internalType": "string",
 						"name": "ingressAddress",
 						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "contractPhoto",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "keyValue",
+						"type": "uint256"
 					}
 				],
 				"name": "addIngress",
@@ -86,14 +149,62 @@
 						"type": "string"
 					},
 					{
+						"internalType": "string",
+						"name": "packageDate",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "warehouseAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "processPhoto",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
-						"name": "roughDate",
+						"name": "keyValue",
+						"type": "uint256"
+					}
+				],
+				"name": "addPackage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "batchId",
 						"type": "uint256"
 					},
 					{
 						"internalType": "string",
-						"name": "roughAddress",
+						"name": "userName",
 						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "roughDate",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "warehouseAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "processPhoto",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "keyValue",
+						"type": "uint256"
 					}
 				],
 				"name": "addRough",
@@ -103,6 +214,49 @@
 			},
 			{
 				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "batchId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "userName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "squashDate",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "warehouseAddress",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "processPhoto",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "keyValue",
+						"type": "uint256"
+					}
+				],
+				"name": "addSquash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "warehouseName",
+						"type": "string"
+					},
 					{
 						"internalType": "string",
 						"name": "warehouseAddress",
@@ -119,6 +273,74 @@
 				"name": "destroy",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "dryDatabase",
+				"outputs": [
+					{
+						"internalType": "contract DryDatabase",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllDry",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "dryDate",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "warehouseAddress",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "processPhoto",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "dryIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Dry[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -143,19 +365,29 @@
 								"type": "address"
 							},
 							{
-								"internalType": "string",
-								"name": "farmerName",
-								"type": "string"
+								"internalType": "uint256",
+								"name": "farmerCccd",
+								"type": "uint256"
 							},
 							{
-								"internalType": "uint256",
+								"internalType": "string",
 								"name": "ingressDate",
-								"type": "uint256"
+								"type": "string"
 							},
 							{
 								"internalType": "string",
 								"name": "ingressAddress",
 								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "contractPhoto",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
 							},
 							{
 								"internalType": "bool",
@@ -164,6 +396,61 @@
 							}
 						],
 						"internalType": "struct Ingress[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllPackage",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "packageDate",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "warehouseAddress",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "processPhoto",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "packageIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Package[]",
 						"name": "",
 						"type": "tuple[]"
 					}
@@ -193,14 +480,24 @@
 								"type": "address"
 							},
 							{
-								"internalType": "uint256",
+								"internalType": "string",
 								"name": "roughDate",
-								"type": "uint256"
+								"type": "string"
 							},
 							{
 								"internalType": "string",
-								"name": "roughAdress",
+								"name": "warehouseAdress",
 								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "processPhoto",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
 							},
 							{
 								"internalType": "bool",
@@ -209,6 +506,61 @@
 							}
 						],
 						"internalType": "struct Rough[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllSquash",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "batchId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "userName",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "userAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "squashDate",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "warehouseAddress",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "processPhoto",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "keyValue",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "squashIsChecked",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Squash[]",
 						"name": "",
 						"type": "tuple[]"
 					}
@@ -229,7 +581,12 @@
 							},
 							{
 								"internalType": "string",
-								"name": "warehoustAddress",
+								"name": "warehouseName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "warehouseAddress",
 								"type": "string"
 							},
 							{
@@ -274,10 +631,36 @@
 			},
 			{
 				"inputs": [],
+				"name": "packageDatabase",
+				"outputs": [
+					{
+						"internalType": "contract PackageDatabase",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "roughDatabase",
 				"outputs": [
 					{
 						"internalType": "contract RoughDatabase",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "squashDatabase",
+				"outputs": [
+					{
+						"internalType": "contract SquashDatabase",
 						"name": "",
 						"type": "address"
 					}
@@ -334,7 +717,7 @@
 		"compilationTarget": {
 			"controller/processing/ProcessingController.sol": "ProcessingController"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -363,11 +746,19 @@
 			]
 		},
 		"controller/processing/ProcessingController.sol": {
-			"keccak256": "0xb0da28fe2bec1d62433c3d1c2f0b8f13f591d0f0abb3b3856a9ca61835614e32",
+			"keccak256": "0xad5c952b3fad69b21df9a87559882868855a828406ddea3c77ea527edfdfe86a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://00dc0caa070c6d6ebbc8d677401a0ad9d0cbec0336086eb23836966f30002786",
-				"dweb:/ipfs/Qmch5XChDEfpwBE6uavjSodkCRWBLhm3zSoKmwmWDSToye"
+				"bzz-raw://59140ff9d6bfb80b169e8ff7f5c2a8a5823eb587a433c1bdae88dc13ecd00707",
+				"dweb:/ipfs/QmUZ4R9ucC9XBtXP1SXxokRdMBJdtbK5us21eRnm25QwLf"
+			]
+		},
+		"cursor/processing/DryDatabaseCursor.sol": {
+			"keccak256": "0x1eb70e106c6646b43611344e0d0a36f0d98613ea3718390e2bde219d0d0e6458",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a899dd001c05137029b268454e67d4a3d4fe25f5e541851c90ab7a399ee1d76b",
+				"dweb:/ipfs/Qmb2iEYRdmd6SijQfGLtwt2ca3fmrWniVuKMSJf36gUSJP"
 			]
 		},
 		"cursor/processing/IngressDatabaseCursor.sol": {
@@ -378,12 +769,28 @@
 				"dweb:/ipfs/QmTgRmUkfVKTD7vci8jQsvxYL7UMsyLQ6RK7KmCgxqGUVf"
 			]
 		},
+		"cursor/processing/PackageDatabaseCursor.sol": {
+			"keccak256": "0x08e77af336b61fbb50aa2bbe41cdb933cc060d6efcffb016d01a32b357a95b23",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://49157142dd87ca41399ebcc861492af71e9a5c1774c629d0ba3e5d6405818373",
+				"dweb:/ipfs/QmRkJFYwioaeoXKUUdXGEBNv5voBaiWiP5CFd3fTXo6vbB"
+			]
+		},
 		"cursor/processing/RoughDatabaseCursor.sol": {
 			"keccak256": "0x83e804da7783fa3f71e73a4b01ec1be454a84e1c7ed83ed5686f0accd208f0ca",
 			"license": "MIT",
 			"urls": [
 				"bzz-raw://aea1912f078f36e8645f01b3e5a44198fdc8cb5f5ec618cba8c9c33aa532f97c",
 				"dweb:/ipfs/QmaDzTHABnqNNQCAouUhoz4wGsyjqRiqgxxedfW9BC9EhR"
+			]
+		},
+		"cursor/processing/SquashDatabaseCursor.sol": {
+			"keccak256": "0x6c5db161588cd950c6f7f061425a5767bec7e68c674eac6810023bfdcbc1931b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://055b74ba74e0efad6dbc2ce06d4fabd5698f38ec57b89b96a38eb5cba6849b39",
+				"dweb:/ipfs/QmfKMoBrCmprWiiGN5b4hdpan27yEjnFebTZAdeHd167t3"
 			]
 		},
 		"cursor/processing/WarehouseDatabaseCursor.sol": {
@@ -394,12 +801,28 @@
 				"dweb:/ipfs/QmeLVBPzQRfTQW6w56EhQpkqE1aupj5TNofDTFpHJEEEd4"
 			]
 		},
+		"database/processing/DryDatabase.sol": {
+			"keccak256": "0x0c914b8fe4f088b9686480354637fc4f6034c244327966d51840070ee73a0b26",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1cf9b29fa5ee1d3bfa1a4eed0d77b175d203a24dbd095ae58341590be9f665b4",
+				"dweb:/ipfs/QmX6tdfdv5ULb55SGTRZFuK65jLvaAn1W9Unc73ApZeCUS"
+			]
+		},
 		"database/processing/IngressDatabase.sol": {
 			"keccak256": "0x4b7b9da4e7e2cee35a3870311ecb80167da72e3f5204d74565cc242ec35e7506",
 			"license": "MIT",
 			"urls": [
 				"bzz-raw://31f469ffad9571642a07f78e08eb43f3d00132425c20230207de683a70c11039",
 				"dweb:/ipfs/QmZ2hgyPWPbeRyBAL1YDqX99hh6eZFMJgakWjPzsvvkAtf"
+			]
+		},
+		"database/processing/PackageDatabase.sol": {
+			"keccak256": "0xf314c67a0090313b188cc518a31382d4273112ff94a98a1cc20e51b4571d215f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://541639a452ba21162ec9a3600100b75ff89f1949d1dc9abe9175e6cbfa532d83",
+				"dweb:/ipfs/QmSjz3zHATrjCeTUcuHBAz1svztUqgN2DufTSpC4j7dHy9"
 			]
 		},
 		"database/processing/RoughDatabase.sol": {
@@ -410,6 +833,14 @@
 				"dweb:/ipfs/QmedTg3TvKvzrLVuS6SHARQSF7uqEeAJJtHfZVmu9RZSeP"
 			]
 		},
+		"database/processing/SquashDatabase.sol": {
+			"keccak256": "0x08d761e236f3371011f6cf77a72ea22b63fa89ba4a73dbd0be3cabc61d793676",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0a7c20390a3e90a0340effa6b10c3b318e6431f6e9baca725b086047f3a1856e",
+				"dweb:/ipfs/QmZctPjfRAKmM2PzxL9oE49v6AzELwVjJNeFWpfMWpAFEq"
+			]
+		},
 		"database/processing/WarehouseDatabase.sol": {
 			"keccak256": "0xac238056cc2a7393b758cf01b945088b57a1066806ab7250fbcdc21105930f06",
 			"license": "MIT",
@@ -418,28 +849,52 @@
 				"dweb:/ipfs/QmYnXh9A5Wwo1jCbdFckpTFTjcWfmXKqzayadihJPNQ4pT"
 			]
 		},
-		"struct/processing/Ingress.sol": {
-			"keccak256": "0x6272f07744ad4e7a826d48e9355c527bec658a40effd792eed88cd26c02dce9e",
+		"struct/processing/Dry.sol": {
+			"keccak256": "0x557c5711a748d6df2b0e97c98869a1d26f4f5c2a4de79d001c3d52928d52c9ca",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://146a69fcffabe96d598ab2e23ff590a57639e0418a83cf0f6e60b2d30a16177e",
-				"dweb:/ipfs/QmZBMnjRhUz1BW6xqPm1Lym7M4rhY4H3Ax8EDFrYzhCLA5"
+				"bzz-raw://a0ecec1ea8593eae47f045bdbc7a5cde33c3b248c09dde13985cbad1207c2b48",
+				"dweb:/ipfs/Qmc4UYWGMguGndAqAqEFoLr34oujP9ed36L1UajjxXRzfS"
+			]
+		},
+		"struct/processing/Ingress.sol": {
+			"keccak256": "0x90fddc92d120102fe9fdc09186cb7bf22f6509d345f05f379003926b16289f15",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://495461251873536d96fad176a22439d24bbecfc8c3f69d893c30a7c7be631603",
+				"dweb:/ipfs/QmYR8pgjr3CXE5VX6TjJ8xyuKU18T7jmgf1MPxjCJHmFfU"
+			]
+		},
+		"struct/processing/Package.sol": {
+			"keccak256": "0x0005bc909493e93e7b4057a950ef1282c4ab512fdbf451741f0e7b13b33a646c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7a18ad35f747457cc8397755487d2a2ed844b35c129b97d14f574eb37f0a3ada",
+				"dweb:/ipfs/QmRX55HL81FU2cqSSShP2GfBwBRXqPfuVgpsiLMEFhHsF9"
 			]
 		},
 		"struct/processing/Rough.sol": {
-			"keccak256": "0x7e68b7b07fce38eb433b8d245007950a8f719bb24b0672089c723d345de7ae3d",
+			"keccak256": "0x60cb788dc773cd9227fe550a9e33097ecff62e33c4e668971452eecb3f817ef3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://644de7b92c8898fbc54e13eec9c14b701ce237c8a9bc870b187b95de38436afa",
-				"dweb:/ipfs/QmS5yzSrxwC4itA3KZx67NYEg4vY6upeffXH2vS7FTisac"
+				"bzz-raw://ab59df2807f0951b7da3a55adf1b94b05ca77d7f50d6aac505b9fd42ddd12cf0",
+				"dweb:/ipfs/QmVWR1v16nM7titUb7JznVeE1Dq6CtPEJrLmncZ22ojPwx"
+			]
+		},
+		"struct/processing/Squash.sol": {
+			"keccak256": "0x95af66b46e6b7bb757d0f7222508d485b807056327df2a85e0428f59dc234505",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://69bde2f4037cc2b940bc81da5de123b54cb4fd439c23b024d5e2be3f552fa8ad",
+				"dweb:/ipfs/QmTFbczJH7WQnZdE3cesr9mRWjvmEpsXMK2B887ajtez5W"
 			]
 		},
 		"struct/processing/Warehouse.sol": {
-			"keccak256": "0x52cc631908f5d0b7c1bb257f86051959f7b2d0fe9e1335dc392cb90e0b3f4043",
+			"keccak256": "0x01bdb70a718addd2a1456eba7af75cc9c718db3beb4b01c2af4fcf80fa4fa131",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2a3f11a4055d7a9c2578cbf0746bb27069f567a1c0eb64cbe07ec3f404a2b850",
-				"dweb:/ipfs/QmbKnQHq7N6aUdEsat3M6FcafwupPjuKCfDybsr7B15kt1"
+				"bzz-raw://040ce1c49d2db73e5baa70251e08397fe4dc784414f20b4232afa6c2fc421d99",
+				"dweb:/ipfs/QmeMSMZpQxhWWuqwSZkixSPcfTEp4sayzN9Kqupk8osZ5S"
 			]
 		}
 	},
